@@ -3,36 +3,30 @@ return {
 	{
 		"folke/neodev.nvim",
 		opts = {},
-		config = function()
-			require("neodev").setup()
-		end,
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
 		dependencies = { "williamboman/mason.nvim" },
-		opts = {
-			ensure_installed = {
-				"lua_ls",
-				"tsserver",
-				"gopls",
-				"eslint",
-			},
-		},
 	},
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
 			"williamboman/mason-lspconfig.nvim",
 			"folke/neodev.nvim",
+			"hrsh7th/cmp-nvim-lsp",
 		},
 		config = function()
-			print("lspconfig")
-			local lspconfig = require("lspconfig")
+			local servers = { "lua_ls", "tsserver", "gopls", "eslint" }
 
-			lspconfig.lua_ls.setup({})
-			lspconfig.tsserver.setup({})
-			lspconfig.gopls.setup({})
-			lspconfig.eslint.setup({})
+			require("mason-lspconfig").setup({ ensure_installed = servers })
+
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+			local lspconfig = require("lspconfig")
+			for _, server in pairs(servers) do
+				lspconfig[server].setup({
+					capabilities = capabilities,
+				})
+			end
 
 			-- TODO: keymaps on LSP attach event
 			-- hover to show underline
