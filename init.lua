@@ -1,9 +1,61 @@
 -- set leader key to comma
-vim.g.mapleader = ','
-vim.g.maplocalleader = ','
+vim.g.mapleader = ","
+vim.g.maplocalleader = ","
 
-require 'options'
-require 'keymaps'
-require 'autocmd'
-require 'lazy'
+-- disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+require "options"
+require "keymaps"
+require "autocmd"
+
+--[[ TODO: plugin list
+
+https://github.com/ThePrimeagen/neovimrc/tree/master
+https://github.com/dam9000/kickstart-modular.nvim/tree/master
+https://www.trackawesomelist.com/rockerBOO/awesome-neovim/readme/
+https://www.lazyvim.org/
+
+UTILS
+  commenter
+  some mini things
+  osc52 clipboard
+  surround
+
+UI
+  undo tree
+  harpoon
+  which key or mini.clue
+  nice/noice with telescope plugin
+  find and replace
+
+CODING
+  code completion
+  lsp
+  mason
+  snippets?
+  luagen for annotations?
+  trouble
+  cmp-cmdline/cmp-buffer/cmp-path
+
+--]]
+
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+	print(vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	}))
+end
+vim.opt.rtp:prepend(lazypath)
+
+require("lazy").setup("plugins", {
+	install = { colorscheme = { "sonokai" } },
+	change_detection = { notify = false }
+})
 
