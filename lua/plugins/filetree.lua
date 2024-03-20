@@ -27,6 +27,5 @@ return {
 		-- change current working directory
 
 		vim.keymap.set("n", "<leader>fe", MiniFiles.open)
-	end
+	end,
 }
-

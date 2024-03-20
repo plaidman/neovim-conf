@@ -2,9 +2,9 @@
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
 
-require "options"
-require "keymaps"
-require "autocmd"
+require("options")
+require("keymaps")
+require("autocmd")
 
 --[[ TODO: plugin list
 
@@ -50,6 +50,5 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins", {
 	install = { colorscheme = { "sonokai" } },
-	change_detection = { notify = false }
+	change_detection = { notify = false },
 })
-

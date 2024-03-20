@@ -27,10 +27,10 @@ map("n", "<f2>", "@@")
 -- TODO: keybinding or plugin to open terminal in lower split
 
 -- don't jump around when holding shift
-map({"v","i","n"}, "<s-up>", "<up>")
-map({"v","i","n"}, "<s-down>", "<down>")
-map({"v","i","n"}, "<s-left>", "<left>")
-map({"v","i","n"}, "<s-right>", "<right>")
+map({ "v", "i", "n" }, "<s-up>", "<up>")
+map({ "v", "i", "n" }, "<s-down>", "<down>")
+map({ "v", "i", "n" }, "<s-left>", "<left>")
+map({ "v", "i", "n" }, "<s-right>", "<right>")
 
 -- TODO: commenter plugin
 -- vnoremap <leader>/ :TComment<cr>gv
@@ -50,11 +50,11 @@ map({"v","i","n"}, "<s-right>", "<right>")
 
 -- copy and paste to system keyboard
 -- TODO: osc52 clipboard plugin
-map({"n", "v"}, "<leader>y", '"+y')
+map({ "n", "v" }, "<leader>y", '"+y')
 map("n", "<leader>Y", '"+yg_')
 map("n", "<leader>yy", '"+yy')
-map({"n","v"}, "<leader>p", '"+p')
-map({"n","v"}, "<leader>P", '"+P')
+map({ "n", "v" }, "<leader>p", '"+p')
+map({ "n", "v" }, "<leader>P", '"+P')
 
 -- tab to indent, reselect if there was a selection
 map("n", "<tab>", "V>")
@@ -80,15 +80,14 @@ map("n", "<d-right>", "<end>")
 map("n", "<d-left>", "<home>")
 
 -- make x,X,<del> avoid overwriting registers
-map({"n", "v"}, "x", '"_x')
-map({"n", "v"}, "X", '"_X')
-map({"n", "v"}, "<del>", '"_x')
+map({ "n", "v" }, "x", '"_x')
+map({ "n", "v" }, "X", '"_X')
+map({ "n", "v" }, "<del>", '"_x')
 
 -- j/k should go up/down through VISIBLE lines, even if real lines wrap.
-map({"n", "v"}, "j", "gj")
-map({"n", "v"}, "<down>", "gj")
-map({"n", "v"}, "k", "gk")
-map({"n", "v"}, "<up>", "gk")
+map({ "n", "v" }, "j", "gj")
+map({ "n", "v" }, "<down>", "gj")
+map({ "n", "v" }, "k", "gk")
+map({ "n", "v" }, "<up>", "gk")
 map("i", "<down>", "<c-o>gj")
 map("i", "<up>", "<c-o>gk")
-

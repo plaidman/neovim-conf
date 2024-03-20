@@ -13,14 +13,14 @@ return {
 			require("telescope").setup({
 				pickers = {
 					colorscheme = {
-						enable_preview = true
-					}
+						enable_preview = true,
+					},
 				},
 				extensions = {
 					["ui-select"] = {
-						require("telescope.themes").get_dropdown({})
-					}
-				}
+						require("telescope.themes").get_dropdown({}),
+					},
+				},
 			})
 
 			require("telescope").load_extension("ui-select")
@@ -46,11 +46,10 @@ return {
 			-- https://github.com/arjunmahishi/flow.nvim
 			-- https://github.com/nvim-telescope/telescope-file-browser.nvim
 			-- https://github.com/jonarrien/telescope-cmdline.nvim
-		end
+		end,
 	},
 	{
 		"nvim-telescope/telescope-fzf-native.nvim",
-		build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
+		build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
 	},
 }
-

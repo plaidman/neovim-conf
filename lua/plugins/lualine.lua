@@ -6,5 +6,5 @@ return {
 
 		-- hide mode line when lualine is loaded
 		vim.opt.showmode = false
-	end
+	end,
 }
