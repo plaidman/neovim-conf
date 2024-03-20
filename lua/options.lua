@@ -2,26 +2,25 @@
 vim.opt.number = true          -- show line numbers
 vim.opt.relativenumber = true  -- and relative numbers
 vim.opt.timeoutlen = 300       -- shows the which-key dialog sooner
-vim.opt.signcolumn = 'yes'     -- signcolumn for git symbols, folding, etc
+vim.opt.signcolumn = "yes"     -- signcolumn for git symbols, folding, etc
 vim.opt.cursorline = true      -- highlight line your cursor is on
 vim.opt.scrolloff = 5          -- number of lines to keep above and below cursor
 vim.opt.colorcolumn = "120"    -- 120 character column marker
 vim.opt.termguicolors = true   -- 24 bit color mode
--- TODO add that one option for showing trailing spaces
--- TODO: uncomment this when lualine is ready
--- vim.opt.showmode = false    -- don't show mode line - it will be shown in lua-line
+vim.opt.listchars = { trail = "·", nbsp = "␣" }
+vim.opt.showmode = false    -- don't show mode line - it will be shown in lua-line
 
 
 -- searching and replacing --
 vim.opt.ignorecase = true     -- case-insensitive searching
 vim.opt.smartcase = true      -- unless there is a capital in the search string
-vim.opt.inccommand = 'split'  -- preview :%s commands live as you type
+vim.opt.inccommand = "split"  -- preview :%s commands live as you type
 
 
 -- window splits --
 vim.opt.splitbelow = true  -- h-splits open below
 vim.opt.splitright = true  -- v-splits open to the right
-vim.opt.mouse = 'a'        -- enable mouse mode
+vim.opt.mouse = "a"        -- enable mouse mode
 
 
 -- tabs and spacing --
@@ -30,7 +29,6 @@ vim.opt.smartindent = true   -- smart indent new lines
 vim.opt.tabstop = 4          -- set tabstop width
 vim.opt.shiftwidth = 4       -- auto indent width
 vim.opt.softtabstop = 4      -- number of spaces <tab> key counts as
--- TODO do we want this?
 -- vim.opt.expandtab = true  -- convert <tab> keypresses to spaces
 
 
