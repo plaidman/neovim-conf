@@ -8,7 +8,6 @@ vim.opt.scrolloff = 5          -- number of lines to keep above and below cursor
 vim.opt.colorcolumn = "120"    -- 120 character column marker
 vim.opt.termguicolors = true   -- 24 bit color mode
 vim.opt.listchars = { trail = "·", nbsp = "␣" }
-vim.opt.showmode = false    -- don't show mode line - it will be shown in lua-line
 
 
 -- searching and replacing --

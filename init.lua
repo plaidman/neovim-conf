@@ -2,17 +2,12 @@
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
 
--- disable netrw
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
 require "options"
 require "keymaps"
 require "autocmd"
 
 --[[ TODO: plugin list
 
-https://github.com/ThePrimeagen/neovimrc/tree/master
 https://github.com/dam9000/kickstart-modular.nvim/tree/master
 https://www.trackawesomelist.com/rockerBOO/awesome-neovim/readme/
 https://www.lazyvim.org/
@@ -29,11 +24,10 @@ UI
   which key or mini.clue
   nice/noice with telescope plugin
   find and replace
+  alpha.lua or some other type of dashboard
 
 CODING
   code completion
-  lsp
-  mason
   snippets?
   luagen for annotations?
   trouble

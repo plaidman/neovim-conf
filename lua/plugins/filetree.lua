@@ -7,7 +7,7 @@ return {
 	-- neotree
 	-- nvimtree
 
-	"echasnovski/mini.nvim",
+	"echasnovski/mini.files",
 	version = false,
 	config = function()
 		require("mini.files").setup()

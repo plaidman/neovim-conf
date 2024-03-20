@@ -9,12 +9,6 @@ local map = vim.keymap.set
 -- TODO: organize leader combos
 -- TODO: add descriptions for use with which-key
 
--- Diagnostic keymaps
-map("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
-map("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
-map("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
-map("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
-
 -- exit terminal mode with double <esc>.
 map("t", "<esc><esc>", [[<c-\><c-n>]], { desc = "Exit terminal mode" })
 
@@ -69,6 +63,7 @@ map("v", "<tab>", ">gv")
 map("v", "<s-tab>", "<gv")
 map("i", "<s-tab>", "<esc>V<A")
 
+-- TODO: there is a mini plugin to do this probably better
 -- move text up and down
 map("n", "<c-up>", ":m-2<cr>")
 map("n", "<c-down>", ":m+<cr>")
