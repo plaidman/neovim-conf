@@ -10,7 +10,7 @@ local map = vim.keymap.set
 -- TODO: add descriptions for use with which-key
 
 -- exit terminal mode with double <esc>.
-map("t", "<esc><esc>", [[<c-\><c-n>]], { desc = "Exit terminal mode" })
+map("t", "<esc><esc>", [[<c-\><c-n>]])
 
 -- window split navigation
 map("n", "<leader>wq", "<c-w><c-q>")
@@ -27,10 +27,10 @@ map("n", "<f2>", "@@")
 -- TODO: keybinding or plugin to open terminal in lower split
 
 -- don't jump around when holding shift
-map({ "v", "i", "n" }, "<s-up>", "<up>")
-map({ "v", "i", "n" }, "<s-down>", "<down>")
-map({ "v", "i", "n" }, "<s-left>", "<left>")
-map({ "v", "i", "n" }, "<s-right>", "<right>")
+map({ "x", "i", "n" }, "<s-up>", "<up>")
+map({ "x", "i", "n" }, "<s-down>", "<down>")
+map({ "x", "i", "n" }, "<s-left>", "<left>")
+map({ "x", "i", "n" }, "<s-right>", "<right>")
 
 -- TODO: harpoon plugin
 -- nnoremap <F12> :bn<cr>
@@ -43,37 +43,35 @@ map({ "v", "i", "n" }, "<s-right>", "<right>")
 
 -- copy and paste to system keyboard
 -- TODO: osc52 clipboard plugin
-map({ "n", "v" }, "<leader>y", '"+y')
+map({ "n", "x" }, "<leader>y", '"+y')
 map("n", "<leader>Y", '"+yg_')
 map("n", "<leader>yy", '"+yy')
-map({ "n", "v" }, "<leader>p", '"+p')
-map({ "n", "v" }, "<leader>P", '"+P')
+map({ "n", "x" }, "<leader>p", '"+p')
+map({ "n", "x" }, "<leader>P", '"+P')
 
 -- tab to indent, reselect if there was a selection
 map("n", "<tab>", "V>")
 map("n", "<s-tab>", "V<")
-map("v", "<tab>", ">gv")
-map("v", "<s-tab>", "<gv")
+map("x", "<tab>", ">gv")
+map("x", "<s-tab>", "<gv")
 map("i", "<s-tab>", "<esc>V<A")
 
 -- select all text, like ctrl-a
 map("n", "<leader>a", "ggVG")
-map("v", "<leader>a", "<esc>ggVG")
+map("x", "<leader>a", "<esc>ggVG")
 
 -- cmd left and right act like home and end
 -- NOTE: this doesn't work in TUI
-map("n", "<d-right>", "<end>")
-map("n", "<d-left>", "<home>")
+map({ "n", "i" }, "<d-right>", "<end>")
+map({ "n", "i" }, "<d-left>", "<home>")
 
 -- make x,X,<del> avoid overwriting registers
-map({ "n", "v" }, "x", '"_x')
-map({ "n", "v" }, "X", '"_X')
-map({ "n", "v" }, "<del>", '"_x')
+map({ "n", "x" }, "x", '"_x')
+map({ "n", "x" }, "X", '"_X')
+map({ "n", "x" }, "<del>", '"_x')
 
 -- j/k should go up/down through VISIBLE lines, even if real lines wrap.
-map({ "n", "v" }, "j", "gj")
-map({ "n", "v" }, "<down>", "gj")
-map({ "n", "v" }, "k", "gk")
-map({ "n", "v" }, "<up>", "gk")
-map("i", "<down>", "<c-o>gj")
-map("i", "<up>", "<c-o>gk")
+map({ "n", "x" }, "j", "gj")
+map({ "n", "x" }, "<down>", "gj")
+map({ "n", "x" }, "k", "gk")
+map({ "n", "x" }, "<up>", "gk")
