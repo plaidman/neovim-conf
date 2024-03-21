@@ -13,16 +13,7 @@ https://www.trackawesomelist.com/rockerBOO/awesome-neovim/readme/
 https://www.lazyvim.org/
 
 UTILS
-  mini.commenter
-  mini.surround
-  mini.move
-  mini.todos
-  mini.ai
-
   mini.clue (or which-key)
-  mini.notify (or other panel)
-  other mini things
-
   osc52 clipboard
 
 UI
@@ -31,7 +22,7 @@ UI
   harpoon
   nice/noice with telescope plugin
   find and replace
-  alpha.lua or some other type of dashboard
+  alpha.lua or dashboard-nvim or mini.startup
 
 CODING
   luagen for annotations?

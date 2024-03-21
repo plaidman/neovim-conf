@@ -1,7 +1,14 @@
 return {
 	{
+		"nvim-telescope/telescope-fzf-native.nvim",
+		build =
+		"cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+	},
+
+	{
 		"nvim-telescope/telescope.nvim",
 		branch = "0.1.x",
+
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-treesitter/nvim-treesitter",
@@ -9,6 +16,7 @@ return {
 			"nvim-telescope/telescope-fzf-native.nvim",
 			"nvim-telescope/telescope-ui-select.nvim",
 		},
+
 		config = function()
 			require("telescope").setup({
 				pickers = {
@@ -35,9 +43,6 @@ return {
 			vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 			vim.keymap.set("n", "<leader>fr", builtin.registers, {})
 
-			-- TODO: other keybinds
-			-- telescope marks
-
 			-- TODO: explore extensions
 			-- https://github.com/nvim-telescope/telescope.nvim/wiki/Extensions
 			-- https://github.com/HUAHUAI23/telescope-session.nvim
@@ -47,9 +52,5 @@ return {
 			-- https://github.com/nvim-telescope/telescope-file-browser.nvim
 			-- https://github.com/jonarrien/telescope-cmdline.nvim
 		end,
-	},
-	{
-		"nvim-telescope/telescope-fzf-native.nvim",
-		build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
 	},
 }

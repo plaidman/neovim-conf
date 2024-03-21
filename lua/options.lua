@@ -7,7 +7,6 @@ vim.opt.cursorline = true -- highlight line your cursor is on
 vim.opt.scrolloff = 5 -- number of lines to keep above and below cursor
 vim.opt.colorcolumn = "120" -- 120 character column marker
 vim.opt.termguicolors = true -- 24 bit color mode
-vim.opt.listchars = { trail = "·", nbsp = "␣" }
 
 -- searching and replacing --
 vim.opt.ignorecase = true -- case-insensitive searching

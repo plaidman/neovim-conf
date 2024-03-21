@@ -5,6 +5,7 @@ return {
 			and "echo 'NOTE: jsregexp is optional, so not a big deal if it fails to build'; make install_jsregexp"
 			or nil,
 	},
+
 	{
 		"hrsh7th/nvim-cmp",
 		dependencies = {
@@ -16,6 +17,7 @@ return {
 			"hrsh7th/cmp-cmdline",
 			"hrsh7th/cmp-buffer",
 		},
+
 		config = function()
 			local cmp = require("cmp")
 
