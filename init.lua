@@ -13,25 +13,29 @@ https://www.trackawesomelist.com/rockerBOO/awesome-neovim/readme/
 https://www.lazyvim.org/
 
 UTILS
-  commenter
-  some mini things
+  mini.commenter
+  mini.surround
+  mini.move
+  mini.todos
+  mini.ai
+
+  mini.clue (or which-key)
+  mini.notify (or other panel)
+  other mini things
+
   osc52 clipboard
-  surround
 
 UI
   undo tree
+  neotree
   harpoon
-  which key or mini.clue
   nice/noice with telescope plugin
   find and replace
   alpha.lua or some other type of dashboard
 
 CODING
-  code completion
-  snippets?
   luagen for annotations?
   trouble
-  cmp-cmdline/cmp-buffer/cmp-path
 
 --]]
 

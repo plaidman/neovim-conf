@@ -32,10 +32,6 @@ map({ "v", "i", "n" }, "<s-down>", "<down>")
 map({ "v", "i", "n" }, "<s-left>", "<left>")
 map({ "v", "i", "n" }, "<s-right>", "<right>")
 
--- TODO: commenter plugin
--- vnoremap <leader>/ :TComment<cr>gv
--- nnoremap <leader>/ :TComment<cr>
-
 -- TODO: harpoon plugin
 -- nnoremap <F12> :bn<cr>
 -- nnoremap <s-F12> :bp<cr>
@@ -44,9 +40,6 @@ map({ "v", "i", "n" }, "<s-right>", "<right>")
 -- nnoremap <leader>3 :3b<cr>
 -- nnoremap <leader>4 :4b<cr>
 -- nnoremap <leader>q :bd<cr>
-
--- TODO: undo tree plugin
--- nnoremap <leader>u :GundoToggle<cr>
 
 -- copy and paste to system keyboard
 -- TODO: osc52 clipboard plugin
@@ -62,13 +55,6 @@ map("n", "<s-tab>", "V<")
 map("v", "<tab>", ">gv")
 map("v", "<s-tab>", "<gv")
 map("i", "<s-tab>", "<esc>V<A")
-
--- TODO: there is a mini plugin to do this probably better
--- move text up and down
-map("n", "<c-up>", ":m-2<cr>")
-map("n", "<c-down>", ":m+<cr>")
-map("v", "<c-up>", ":m-2<cr>gv")
-map("v", "<c-down>", ":m'>+<cr>gv")
 
 -- select all text, like ctrl-a
 map("n", "<leader>a", "ggVG")

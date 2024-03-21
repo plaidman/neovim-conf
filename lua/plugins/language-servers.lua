@@ -67,6 +67,4 @@ return {
 			})
 		end,
 	},
-	-- TODO: echasnovski/mini.notify or j-hui/fidget.nvim notifications probably go in their own file
-	--
 }
