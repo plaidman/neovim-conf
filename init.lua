@@ -12,6 +12,11 @@ https://github.com/dam9000/kickstart-modular.nvim/tree/master
 https://www.trackawesomelist.com/rockerBOO/awesome-neovim/readme/
 https://www.lazyvim.org/
 
+stevearc/conform.nvim
+mfussenegger/nvim-lint
+j-hui/fidget.nvim
+
+
 UTILS
   mini.clue (or which-key)
   osc52 clipboard

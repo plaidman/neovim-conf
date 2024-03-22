@@ -2,7 +2,7 @@ return {
 	{
 		"L3MON4D3/LuaSnip",
 		build = (not jit.os:find("Windows"))
-			and "echo 'NOTE: jsregexp is optional, so not a big deal if it fails to build'; make install_jsregexp"
+			and "echo 'NOTE jsregexp is optional, so not a big deal if it fails to build'; make install_jsregexp"
 			or nil,
 	},
 
@@ -33,6 +33,9 @@ return {
 
 				-- TODO: read through docs for some good keybind options for buffer and command
 				-- https://github.com/hrsh7th/nvim-cmp/blob/main/doc/cmp.txt
+
+				--TODO: open completion menu without picking one
+
 				snippet = {
 					expand = function(args)
 						require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
@@ -47,7 +50,7 @@ return {
 					["<C-f>"] = cmp.mapping.scroll_docs(4),
 					["<C-Space>"] = cmp.mapping.complete(),
 					["<C-e>"] = cmp.mapping.abort(),
-					["<CR>"] = cmp.mapping.confirm({ select = true }),
+					["<CR>"] = cmp.mapping.confirm({ select = false }),
 				}),
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },

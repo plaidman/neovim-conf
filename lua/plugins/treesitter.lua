@@ -31,8 +31,5 @@ return {
 			indent = { enable = true },
 		})
 	end,
-	-- TODO: explore some other stuff:
-	--    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
-	--    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
-	--    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+	-- TODO: Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
 }

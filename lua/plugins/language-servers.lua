@@ -29,7 +29,7 @@ return {
 				})
 			end
 
-			-- TODO: keymaps on LSP attach event
+			-- TODO: keymaps on LSP attach event https://github.com/dam9000/kickstart-modular.nvim/blob/master/lua/kickstart/plugins/lspconfig.lua#L48
 			-- hover to show underline
 			-- hover to show definition?
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
