@@ -15,18 +15,21 @@ https://www.lazyvim.org/
 
 
 UTILS
-  mini.clue or which-key
-  osc52 clipboard
+  echasnovski/mini.clue or
+    folke/which-key.nvim
+  ojroques/nvim-osc52
 
 UI
-  harpoon
-  nice/noice with telescope plugin
+  ThePrimeagen/harpoon (use harpoon2 branch)
+  folke/noice.nvim
+    and telescope plugin?
   find and replace
-  alpha.lua or dashboard-nvim or mini.startup
+  goolord/alpha-nvim or
+    nvimdev/dashboard-nvim or
+	echasnovski/mini.starter
 
 CODING
-  luagen for annotations?
-  trouble
+  folke/trouble.nvim
   stevearc/conform.nvim
   mfussenegger/nvim-lint
 

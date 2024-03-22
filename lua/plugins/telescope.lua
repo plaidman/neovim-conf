@@ -50,9 +50,9 @@ return {
 			vim.keymap.set("n", "<leader>u", require("telescope").extensions.undo.undo, {})
 			vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 			vim.keymap.set("n", "<leader>fr", builtin.registers, {})
+			vim.keymap.set('n', '<leader>*', builtin.grep_string, {})
 
 			-- TODO: additional keybinds
-			-- vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
 			-- vim.keymap.set("n", "<leader>sn", function()
 			-- 	builtin.find_files({ cwd = vim.fn.stdpath("config") })
 			-- end, { desc = "[S]earch [N]eovim files" })
@@ -63,7 +63,6 @@ return {
 			-- https://github.com/nvim-telescope/telescope-media-files.nvim
 			-- https://github.com/doctorfree/cheatsheet.nvim
 			-- https://github.com/arjunmahishi/flow.nvim
-			-- https://github.com/nvim-telescope/telescope-file-browser.nvim
 			-- https://github.com/jonarrien/telescope-cmdline.nvim
 		end,
 	},
