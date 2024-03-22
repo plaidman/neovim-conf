@@ -14,6 +14,7 @@ return {
 			"nvim-tree/nvim-web-devicons",
 			"nvim-telescope/telescope-fzf-native.nvim",
 			"nvim-telescope/telescope-ui-select.nvim",
+			"debugloop/telescope-undo.nvim",
 		},
 
 		config = function()
@@ -27,11 +28,18 @@ return {
 					["ui-select"] = {
 						require("telescope.themes").get_dropdown({}),
 					},
+					undo = {
+						use_delta = false,
+						layout_config = {
+							preview_width = 0.7,
+						},
+					},
 				},
 			})
 
 			require("telescope").load_extension("ui-select")
 			require("telescope").load_extension("fzf")
+			require("telescope").load_extension("undo")
 
 			local builtin = require("telescope.builtin")
 
@@ -39,6 +47,7 @@ return {
 			vim.keymap.set("n", "<c-p>", builtin.find_files, {})
 			vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 			vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
+			vim.keymap.set("n", "<leader>u", require("telescope").extensions.undo.undo, {})
 			vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 			vim.keymap.set("n", "<leader>fr", builtin.registers, {})
 

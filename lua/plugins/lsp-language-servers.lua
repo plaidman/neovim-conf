@@ -16,7 +16,7 @@ return {
 		},
 
 		config = function()
-			local servers = { "lua_ls", "tsserver", "gopls", "eslint", "pyright" }
+			local servers = { "lua_ls", "tsserver", "gopls", "eslint", "pyright", "rust_analyzer" }
 
 			require("mason-lspconfig").setup({ ensure_installed = servers })
 			require("neodev").setup()
