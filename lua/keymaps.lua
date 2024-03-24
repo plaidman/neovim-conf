@@ -21,11 +21,6 @@ map("n", "<leader>ww", "<c-w><c-w>")
 -- clear highlight when pressing esc in normal mode
 map("n", "<esc>", "<cmd>nohlsearch<cr>")
 
--- TODO: change this to some other key? f2 on mac magic bar is dumb
-map("n", "<f2>", "@@")
-
--- TODO: keybinding or plugin to open terminal in lower split
-
 -- don't jump around when holding shift
 map({ "x", "i", "n" }, "<s-up>", "<up>")
 map({ "x", "i", "n" }, "<s-down>", "<down>")

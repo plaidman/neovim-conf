@@ -28,9 +28,6 @@ UI
 CODING
   stevearc/conform.nvim and
     mfussenegger/nvim-lint
-  or
-  mattn/efm-langserver and
-    creativenull/efmls-configs-nvim
 
   https://www.youtube.com/watch?v=ybUE4D80XSk
 

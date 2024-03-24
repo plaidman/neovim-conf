@@ -16,6 +16,16 @@ return {
 	{ "tpope/vim-fugitive" },
 
 	{
+		'akinsho/toggleterm.nvim',
+		version = "*",
+		config = function()
+			require("toggleterm").setup()
+
+			vim.keymap.set("n", "<c-t>", ":ToggleTerm<cr>")
+		end,
+	},
+
+	{
 		"lewis6991/gitsigns.nvim",
 		opts = {
 			signs = {

@@ -29,7 +29,9 @@ return {
 			auto_install = true,
 			highlight = { enable = true },
 			indent = { enable = true },
+			modules = {},
+			ignore_install = {},
+			sync_install = false,
 		})
 	end,
-	-- TODO: Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
 }
