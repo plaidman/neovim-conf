@@ -16,12 +16,12 @@ return {
 	{ "tpope/vim-fugitive" },
 
 	{
-		'akinsho/toggleterm.nvim',
+		"akinsho/toggleterm.nvim",
 		version = "*",
 		config = function()
-			require("toggleterm").setup()
+			require("toggleterm").setup({ direction = "float" })
 
-			vim.keymap.set("n", "<c-t>", ":ToggleTerm<cr>")
+			vim.keymap.set({ "n", "t" }, "<c-t>", "<cmd>ToggleTerm<cr>")
 		end,
 	},
 

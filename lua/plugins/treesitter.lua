@@ -29,9 +29,6 @@ return {
 			auto_install = true,
 			highlight = { enable = true },
 			indent = { enable = true },
-			modules = {},
-			ignore_install = {},
-			sync_install = false,
 		})
 	end,
 }

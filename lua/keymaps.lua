@@ -27,15 +27,6 @@ map({ "x", "i", "n" }, "<s-down>", "<down>")
 map({ "x", "i", "n" }, "<s-left>", "<left>")
 map({ "x", "i", "n" }, "<s-right>", "<right>")
 
--- TODO: harpoon plugin
--- nnoremap <F12> :bn<cr>
--- nnoremap <s-F12> :bp<cr>
--- nnoremap <leader>1 :1b<cr>
--- nnoremap <leader>2 :2b<cr>
--- nnoremap <leader>3 :3b<cr>
--- nnoremap <leader>4 :4b<cr>
--- nnoremap <leader>q :bd<cr>
-
 -- copy and paste to system keyboard
 -- TODO: osc52 clipboard plugin
 map({ "n", "x" }, "<leader>y", '"+y')
