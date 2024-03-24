@@ -12,7 +12,7 @@ https://github.com/dam9000/kickstart-modular.nvim/tree/master
 https://www.trackawesomelist.com/rockerBOO/awesome-neovim/readme/
 https://www.lazyvim.org/
 
-
+set lazy load configs for go over things that don't need to be loaded immediately (e.g. LSP stuff)
 
 UTILS
   echasnovski/mini.clue or
@@ -21,17 +21,19 @@ UTILS
 
 UI
   ThePrimeagen/harpoon (use harpoon2 branch)
-  folke/noice.nvim
-    and telescope plugin?
-  find and replace
   goolord/alpha-nvim or
     nvimdev/dashboard-nvim or
 	echasnovski/mini.starter
 
 CODING
-  folke/trouble.nvim
-  stevearc/conform.nvim
-  mfussenegger/nvim-lint
+  stevearc/conform.nvim and
+    mfussenegger/nvim-lint
+  or
+  mattn/efm-langserver and
+    creativenull/efmls-configs-nvim
+
+  https://www.youtube.com/watch?v=ybUE4D80XSk
+
 
 --]]
 

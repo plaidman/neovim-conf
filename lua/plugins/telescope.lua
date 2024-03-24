@@ -7,6 +7,18 @@ return {
 	{
 		"nvim-telescope/telescope.nvim",
 		branch = "0.1.x",
+		cmd = "Telescope",
+		keys = {
+			"<leader>ft",
+			"<c-p>",
+			"<leader>fg",
+			"<leader>fb",
+			"<leader>u",
+			"<leader>fh",
+			"<leader>fr",
+			'<leader>*',
+			"<leader>fn",
+		},
 
 		dependencies = {
 			"nvim-lua/plenary.nvim",
@@ -43,6 +55,10 @@ return {
 
 			local builtin = require("telescope.builtin")
 
+			-- tip: grep something,
+			--   ctrl-q to put all entries in the quick fix,
+			--   then :cfdo %s/find/replace/g to find and replace all the things
+
 			vim.keymap.set("n", "<leader>ft", builtin.find_files, {})
 			vim.keymap.set("n", "<c-p>", builtin.find_files, {})
 			vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
@@ -50,12 +66,10 @@ return {
 			vim.keymap.set("n", "<leader>u", require("telescope").extensions.undo.undo, {})
 			vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 			vim.keymap.set("n", "<leader>fr", builtin.registers, {})
-			vim.keymap.set('n', '<leader>*', builtin.grep_string, {})
-
-			-- TODO: additional keybinds
-			-- vim.keymap.set("n", "<leader>sn", function()
-			-- 	builtin.find_files({ cwd = vim.fn.stdpath("config") })
-			-- end, { desc = "[S]earch [N]eovim files" })
+			vim.keymap.set('n', "<leader>*", builtin.grep_string, {})
+			vim.keymap.set("n", "<leader>fn", function()
+				builtin.find_files({ cwd = vim.fn.stdpath("config") })
+			end, {})
 
 			-- TODO: explore extensions
 			-- https://github.com/nvim-telescope/telescope.nvim/wiki/Extensions

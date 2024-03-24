@@ -8,6 +8,7 @@ return {
 
 	{
 		"neovim/nvim-lspconfig",
+		event = { "BufReadPost", "BufNewFile", "BufWritePre" },
 
 		dependencies = {
 			"williamboman/mason-lspconfig.nvim",
@@ -40,6 +41,7 @@ return {
 
 	{
 		"nvimtools/none-ls.nvim",
+		event = { "BufReadPost", "BufNewFile", "BufWritePre" },
 		dependencies = {
 			"jay-babu/mason-null-ls.nvim",
 		},
@@ -61,6 +63,7 @@ return {
 
 	{
 		"jay-babu/mason-null-ls.nvim",
+		lazy = true,
 		dependencies = {
 			"williamboman/mason.nvim",
 		},
