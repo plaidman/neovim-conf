@@ -29,14 +29,6 @@ return {
 				-- TODO: add icons to menu
 				-- https://github.com/hrsh7th/nvim-cmp/wiki/Menu-Appearance#how-to-add-visual-studio-code-codicons-to-the-menu
 
-				-- TODO: learn keybinds for filling in snippet placeholders
-				-- https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymap
-
-				-- TODO: read through docs for some good keybind options for buffer and command
-				-- https://github.com/hrsh7th/nvim-cmp/blob/main/doc/cmp.txt
-
-				--TODO: open completion menu without picking one
-
 				snippet = {
 					expand = function(args)
 						require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
@@ -65,8 +57,7 @@ return {
 
 			cmp.setup.cmdline(":", {
 				completion = {
-					autocomplete = false,
-					completeopt = "menu,menuone,noinsert",
+					completeopt = "menu,menuone,noselect",
 				},
 				mapping = cmp.mapping.preset.cmdline(),
 				sources = cmp.config.sources({
@@ -77,6 +68,9 @@ return {
 			})
 
 			cmp.setup.cmdline("?", {
+				completion = {
+					completeopt = "menu,menuone,noselect",
+				},
 				mapping = cmp.mapping.preset.cmdline(),
 				sources = cmp.config.sources({
 					{ name = "buffer" },
@@ -86,6 +80,9 @@ return {
 			})
 
 			cmp.setup.cmdline("/", {
+				completion = {
+					completeopt = "menu,menuone,noselect",
+				},
 				mapping = cmp.mapping.preset.cmdline(),
 				sources = cmp.config.sources({
 					{ name = "buffer" },

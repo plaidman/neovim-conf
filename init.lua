@@ -20,7 +20,6 @@ UTILS
   ojroques/nvim-osc52
 
 UI
-  ThePrimeagen/harpoon (use harpoon2 branch)
   goolord/alpha-nvim or
     nvimdev/dashboard-nvim or
 	echasnovski/mini.starter
