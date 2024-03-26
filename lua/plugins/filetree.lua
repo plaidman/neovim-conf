@@ -1,30 +1,28 @@
 return {
-	-- TODO: keybinds for
-	--   enter folder
-	--   back folder
-	--   back to CWD
-	--   change CWD
-	--   hide and show dot files
-	--   preview files
-	--   open explorer in current file's directory
-	--   open explorer in CWD
-
 	{
 		"stevearc/oil.nvim",
-		-- https://github.com/stevearc/oil.nvim/blob/master/doc/oil.txt
-		opts = {},
 		dependencies = { "nvim-tree/nvim-web-devicons" },
-	},
 
-	-- {
-	-- 	"echasnovski/mini.files",
-	-- 	-- https://github.com/echasnovski/mini.files/blob/main/doc/mini-files.txt
-	-- 	version = false,
-	-- 	dependencies = { "nvim-tree/nvim-web-devicons" },
-	--
-	-- 	config = function()
-	-- 		require("mini.files").setup()
-	-- 		vim.keymap.set("n", "<leader>fe", MiniFiles.open)
-	-- 	end,
-	-- },
+		config = function()
+			require("oil").setup({
+				keymaps = {
+					["g?"] = "actions.show_help",
+					["<CR>"] = "actions.select",
+					["<leader>v"] = "actions.select_vsplit",
+					["<leader>s"] = "actions.select_split",
+					["<leader>p"] = "actions.preview",
+					["<leader>q"] = "actions.close",
+					["<leader>r"] = "actions.refresh",
+					["-"] = "actions.parent",
+					["_"] = "actions.open_cwd",
+					["`"] = "actions.cd",
+					["<leader>."] = "actions.toggle_hidden",
+				},
+				use_default_keymaps = false,
+			})
+
+	 		vim.keymap.set("n", "<leader>fe", ":Oil .<cr>")
+	 		vim.keymap.set("n", "<leader>fE", ":Oil %:h<cr>")
+		end,
+	},
 }
