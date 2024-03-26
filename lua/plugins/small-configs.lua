@@ -10,11 +10,18 @@ return {
 	-- starter
 
 	{ "echasnovski/mini.ai", opts = {} },
-	{ "echasnovski/mini.cursorword", opts = {} },
 	{ "echasnovski/mini.notify", opts = {} },
 	{ "kylechui/nvim-surround", opts = {} },
 	{ "tpope/vim-fugitive" },
 
+	{
+		"echasnovski/mini.cursorword",
+		config = function()
+			require("mini.cursorword").setup()
+
+			vim.cmd("highlight MiniCursorword gui=underline")
+		end
+	},
 	{
 		"akinsho/toggleterm.nvim",
 		version = "*",
