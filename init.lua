@@ -14,18 +14,25 @@ https://www.lazyvim.org/
 
 set lazy load configs for go over things that don't need to be loaded immediately (e.g. LSP stuff)
 
-  echasnovski/mini.clue or
-    folke/which-key.nvim
+	keymap reminder popup
+		echasnovski/mini.clue
+		folke/which-key.nvim
 
-  goolord/alpha-nvim or
-    nvimdev/dashboard-nvim or
-	echasnovski/mini.starter
+	startup screen
+		goolord/alpha-nvim
+		nvimdev/dashboard-nvim
+		echasnovski/mini.starter
 
-  stevearc/conform.nvim and
-    mfussenegger/nvim-lint
+	session manager plugin
+		echasnovski/mini.sessions
+		rmagatti/auto-session
+		folke/persistence.nvim
+		gennaro-tedesco/nvim-possession
+		Shatur/neovim-session-manager
 
-  session manager plugin
-    mini.sessions
+	git manager
+		fugitive
+		neogit
 
 --]]
 

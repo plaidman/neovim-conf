@@ -1,16 +1,12 @@
 return {
-	{ "williamboman/mason.nvim", build = ":MasonUpdate", opts = {} },
-
-	{
-		"williamboman/mason-lspconfig.nvim",
-		dependencies = { "williamboman/mason.nvim" },
-	},
+	{ "williamboman/mason.nvim", build = ":MasonUpdate" },
 
 	{
 		"neovim/nvim-lspconfig",
 		event = { "BufReadPost", "BufNewFile", "BufWritePre" },
 
 		dependencies = {
+			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			"folke/neodev.nvim",
 			"hrsh7th/cmp-nvim-lsp",
@@ -19,6 +15,7 @@ return {
 		config = function()
 			local servers = { "lua_ls", "tsserver", "gopls", "eslint", "pyright", "rust_analyzer" }
 
+			require("mason").setup()
 			require("mason-lspconfig").setup({ ensure_installed = servers })
 			require("neodev").setup()
 
@@ -37,38 +34,20 @@ return {
 	},
 
 	{
-		"nvimtools/none-ls.nvim",
-		event = { "BufReadPost", "BufNewFile", "BufWritePre" },
-		dependencies = {
-			"jay-babu/mason-null-ls.nvim",
-		},
-
+		"stevearc/conform.nvim",
+		event = { "BufWritePre" },
+		keys = { "<leader>=" },
 		config = function()
-			local null_ls = require("null-ls")
-
-			null_ls.setup({
-				sources = {
-					null_ls.builtins.formatting.stylua,
-					null_ls.builtins.formatting.prettier,
+			require("conform").setup({
+				formatters_by_ft = {
+					lua = { "stylua" },
 				},
 			})
 
-			vim.keymap.set("n", "<leader>=", vim.lsp.buf.format)
+			vim.keymap.set("n", "<leader>=", function()
+				require("conform").format({ async = true, lsp_fallback = true })
+			end)
 		end,
 	},
-
-	{
-		"jay-babu/mason-null-ls.nvim",
-		lazy = true,
-		dependencies = {
-			"williamboman/mason.nvim",
-		},
-
-		config = function()
-			require("mason-null-ls").setup({
-				automatic_installation = true,
-				ensure_installed = { "stylua", "prettier" },
-			})
-		end,
-	},
+	-- { "mfussenegger/nvim-lint" }
 }
