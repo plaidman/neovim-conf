@@ -1,14 +1,4 @@
 return {
-	-- TODO: more mini stuff
-	-- bracketed
-	-- bufremove
-	-- clue
-	-- completion
-	-- files
-	-- operators
-	-- sessions
-	-- starter
-
 	{ "echasnovski/mini.ai", opts = {} },
 	{ "echasnovski/mini.notify", opts = {} },
 	{ "kylechui/nvim-surround", opts = {} },

@@ -59,17 +59,17 @@ return {
 			--   ctrl-q to put all entries in the quick fix,
 			--   then :cfdo %s/find/replace/g to find and replace all the things
 
-			vim.keymap.set("n", "<leader>ft", builtin.find_files, {})
-			vim.keymap.set("n", "<c-p>", builtin.find_files, {})
-			vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
-			vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
-			vim.keymap.set("n", "<leader>u", require("telescope").extensions.undo.undo, {})
-			vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
-			vim.keymap.set("n", "<leader>fr", builtin.registers, {})
-			vim.keymap.set('n', "<leader>*", builtin.grep_string, {})
+			vim.keymap.set("n", "<leader>ft", builtin.find_files)
+			vim.keymap.set("n", "<c-p>", builtin.find_files)
+			vim.keymap.set("n", "<leader>fg", builtin.live_grep)
+			vim.keymap.set("n", "<leader>fb", builtin.buffers)
+			vim.keymap.set("n", "<leader>u", require("telescope").extensions.undo.undo)
+			vim.keymap.set("n", "<leader>fh", builtin.help_tags)
+			vim.keymap.set("n", "<leader>fr", builtin.registers)
+			vim.keymap.set('n', "<leader>*", builtin.grep_string)
 			vim.keymap.set("n", "<leader>fn", function()
 				builtin.find_files({ cwd = vim.fn.stdpath("config") })
-			end, {})
+			end)
 
 			-- TODO: explore extensions
 			-- https://github.com/nvim-telescope/telescope.nvim/wiki/Extensions

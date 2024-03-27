@@ -14,22 +14,18 @@ https://www.lazyvim.org/
 
 set lazy load configs for go over things that don't need to be loaded immediately (e.g. LSP stuff)
 
-UTILS
   echasnovski/mini.clue or
     folke/which-key.nvim
-  ojroques/nvim-osc52
 
-UI
   goolord/alpha-nvim or
     nvimdev/dashboard-nvim or
 	echasnovski/mini.starter
 
-CODING
   stevearc/conform.nvim and
     mfussenegger/nvim-lint
 
-  https://www.youtube.com/watch?v=ybUE4D80XSk
-
+  session manager plugin
+    mini.sessions
 
 --]]
 

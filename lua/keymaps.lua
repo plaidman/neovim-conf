@@ -18,6 +18,10 @@ map("n", "<leader>wv", "<c-w><c-v>")
 map("n", "<leader>ws", "<c-w><c-s>")
 map("n", "<leader>ww", "<c-w><c-w>")
 
+-- previous or next quickfix list
+map("n", "[q", "<cmd>cprevious<cr>")
+map("n", "]q", "<cmd>cnext<cr>")
+
 -- clear highlight when pressing esc in normal mode
 map("n", "<esc>", "<cmd>nohlsearch<cr>")
 
@@ -28,7 +32,7 @@ map({ "x", "i", "n" }, "<s-left>", "<left>")
 map({ "x", "i", "n" }, "<s-right>", "<right>")
 
 -- copy and paste to system keyboard
--- TODO: osc52 clipboard plugin
+-- osc52 clipboard plugin
 map({ "n", "x" }, "<leader>y", '"+y')
 map("n", "<leader>Y", '"+yg_')
 map("n", "<leader>yy", '"+yy')

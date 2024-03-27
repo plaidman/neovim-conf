@@ -6,7 +6,6 @@ return {
 		"ThePrimeagen/harpoon",
 	},
 	config = function()
-		-- TODO: remove dots for empty harpoon slot
 		local harpoonline = require("harpoonline")
 		harpoonline.setup({
 			on_update = function()

@@ -18,8 +18,3 @@ autocmd("BufWritePre", {
 	command = [[%s/\s\+$//e]],
 })
 
--- TODO: add custom commands for common projects
--- com VimConfig cd ~/dotfiles/vim-config/
--- com Advent cd ~/devel/android/villains/
--- com Synopsis cd ~/devel/android/villains/
--- com Orbiter cd ~/devel/android/villains/
