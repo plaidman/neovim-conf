@@ -30,12 +30,11 @@ session manager plugin
 	HUAHUAI23/telescope-session.nvim
 
 git manager
-	tpope/fugitive
+TODO: neogit but update the :Git command vs lazygit in toggleterm
 	NeogitOrg/neogit
 	kdheepak/lazygit.nvim
-	lewis6991/gitsigns.nvim
 
-pick a better colorscheme
+TODO: pick a better colorscheme
 
 https://github.com/akinsho/toggleterm.nvim?tab=readme-ov-file#custom-terminals
 

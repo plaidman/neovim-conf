@@ -11,7 +11,7 @@ return {
 			"nvim-telescope/telescope.nvim",
 		},
 		config = function()
-			require("neogit").setup()
+			require("neogit").setup({})
 		end,
 	},
 
@@ -23,13 +23,20 @@ return {
 			vim.cmd("highlight MiniCursorword gui=underline")
 		end,
 	},
+
 	{
 		"akinsho/toggleterm.nvim",
 		version = "*",
 		config = function()
 			require("toggleterm").setup({ direction = "float" })
-
 			vim.keymap.set({ "n", "t" }, "<c-t>", "<cmd>ToggleTerm<cr>")
+
+			local Terminal = require("toggleterm.terminal").Terminal
+			local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
+
+			vim.keymap.set("n", "<leader>g", function()
+				lazygit:toggle()
+			end)
 		end,
 	},
 

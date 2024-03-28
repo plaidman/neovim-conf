@@ -30,4 +30,4 @@ vim.opt.softtabstop = 4 -- number of spaces <tab> key counts as
 vim.opt.undofile = true -- save undo history between sessions
 vim.opt.modeline = false -- ignore vim mode command lines in files
 vim.opt.swapfile = false -- don't create a .swp file
-vim.opt.updatetime = 500 -- time that CursorHold events fire after you stop typing
+vim.opt.updatetime = 250 -- time that CursorHold events fire after you stop typing
