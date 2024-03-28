@@ -4,6 +4,7 @@ return {
 	dependencies = { "nvim-lua/plenary.nvim" },
 	config = function()
 		local harpoon = require("harpoon")
+		---@diagnostic disable-next-line: missing-fields
 		harpoon.setup()
 
 		vim.keymap.set("n", "<leader>h", function()
