@@ -70,14 +70,6 @@ return {
 			vim.keymap.set("n", "<leader>fn", function()
 				builtin.find_files({ cwd = vim.fn.stdpath("config") })
 			end)
-
-			-- TODO: explore extensions
-			-- https://github.com/nvim-telescope/telescope.nvim/wiki/Extensions
-			-- https://github.com/HUAHUAI23/telescope-session.nvim
-			-- https://github.com/nvim-telescope/telescope-media-files.nvim
-			-- https://github.com/doctorfree/cheatsheet.nvim
-			-- https://github.com/arjunmahishi/flow.nvim
-			-- https://github.com/jonarrien/telescope-cmdline.nvim
 		end,
 	},
 }

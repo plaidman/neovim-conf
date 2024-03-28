@@ -6,33 +6,38 @@ require("options")
 require("keymaps")
 require("autocmd")
 
---[[ TODO: plugin list
+--[[ TODO:
 
-https://github.com/dam9000/kickstart-modular.nvim/tree/master
 https://www.trackawesomelist.com/rockerBOO/awesome-neovim/readme/
 https://www.lazyvim.org/
 
-set lazy load configs for go over things that don't need to be loaded immediately (e.g. LSP stuff)
+organize leader combos
+	tris203/hawtkeys.nvim
+	echasnovski/mini.clue
+	folke/which-key.nvim
 
-	keymap reminder popup
-		echasnovski/mini.clue
-		folke/which-key.nvim
+startup screen
+	goolord/alpha-nvim
+	nvimdev/dashboard-nvim
+	echasnovski/mini.starter
 
-	startup screen
-		goolord/alpha-nvim
-		nvimdev/dashboard-nvim
-		echasnovski/mini.starter
+session manager plugin
+	echasnovski/mini.sessions
+	rmagatti/auto-session
+	folke/persistence.nvim
+	gennaro-tedesco/nvim-possession
+	Shatur/neovim-session-manager
+	HUAHUAI23/telescope-session.nvim
 
-	session manager plugin
-		echasnovski/mini.sessions
-		rmagatti/auto-session
-		folke/persistence.nvim
-		gennaro-tedesco/nvim-possession
-		Shatur/neovim-session-manager
+git manager
+	tpope/fugitive
+	NeogitOrg/neogit
+	kdheepak/lazygit.nvim
+	lewis6991/gitsigns.nvim
 
-	git manager
-		fugitive
-		neogit
+pick a better colorscheme
+
+https://github.com/akinsho/toggleterm.nvim?tab=readme-ov-file#custom-terminals
 
 --]]
 

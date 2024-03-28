@@ -21,8 +21,6 @@ return {
 
 		config = function()
 			local cmp = require("cmp")
-			-- TODO: add icons to menu
-			-- https://github.com/hrsh7th/nvim-cmp/wiki/Menu-Appearance#how-to-add-visual-studio-code-codicons-to-the-menu
 
 			cmp.setup({
 				completion = {

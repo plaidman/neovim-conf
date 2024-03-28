@@ -1,13 +1,10 @@
 local map = vim.keymap.set
 
 -- optionally enforce hjkl instead of udlr?
--- vim.keymap.set("n", "<left>", "<cmd>echo "Use h to move!!"<CR>")
--- vim.keymap.set("n", "<right>", "<cmd>echo "Use l to move!!"<CR>")
--- vim.keymap.set("n", "<up>", "<cmd>echo "Use k to move!!"<CR>")
--- vim.keymap.set("n", "<down>", "<cmd>echo "Use j to move!!"<CR>")
-
--- TODO: organize leader combos
--- TODO: add descriptions for use with which-key
+-- map("n", "<left>", "<cmd>echo "Use h to move!!"<CR>")
+-- map("n", "<right>", "<cmd>echo "Use l to move!!"<CR>")
+-- map("n", "<up>", "<cmd>echo "Use k to move!!"<CR>")
+-- map("n", "<down>", "<cmd>echo "Use j to move!!"<CR>")
 
 -- exit terminal mode with double <esc>.
 map("t", "<esc><esc>", [[<c-\><c-n>]])
