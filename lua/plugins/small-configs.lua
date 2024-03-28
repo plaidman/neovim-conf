@@ -2,7 +2,18 @@ return {
 	{ "echasnovski/mini.ai", opts = {} },
 	{ "echasnovski/mini.notify", opts = {} },
 	{ "kylechui/nvim-surround", opts = {} },
-	{ "tpope/vim-fugitive" },
+
+	{
+		"NeogitOrg/neogit",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"sindrets/diffview.nvim",
+			"nvim-telescope/telescope.nvim",
+		},
+		config = function()
+			require("neogit").setup()
+		end,
+	},
 
 	{
 		"echasnovski/mini.cursorword",
@@ -10,7 +21,7 @@ return {
 			require("mini.cursorword").setup()
 
 			vim.cmd("highlight MiniCursorword gui=underline")
-		end
+		end,
 	},
 	{
 		"akinsho/toggleterm.nvim",
