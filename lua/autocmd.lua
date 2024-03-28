@@ -18,3 +18,12 @@ autocmd("BufWritePre", {
 	command = [[%s/\s\+$//e]],
 })
 
+-- autocmd("CursorHold", {
+-- 	desc = "hover when stopping moving the cursor",
+-- 	group = augroup,
+-- 	pattern = "*",
+-- 	callback = function()
+-- 		vim.lsp.buf.hover()
+-- 	end
+-- })
+
