@@ -12,15 +12,7 @@ return {
 		},
 		config = function()
 			require("neogit").setup({})
-		end,
-	},
-
-	{
-		"echasnovski/mini.cursorword",
-		config = function()
-			require("mini.cursorword").setup()
-
-			vim.cmd("highlight MiniCursorword gui=underline")
+			vim.keymap.set("n", "<leader>gn", "<cmd>Neogit<cr>")
 		end,
 	},
 
@@ -34,7 +26,7 @@ return {
 			local Terminal = require("toggleterm.terminal").Terminal
 			local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
 
-			vim.keymap.set("n", "<leader>g", function()
+			vim.keymap.set("n", "<leader>gt", function()
 				lazygit:toggle()
 			end)
 		end,

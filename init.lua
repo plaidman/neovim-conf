@@ -28,15 +28,18 @@ session manager plugin
 	gennaro-tedesco/nvim-possession
 	Shatur/neovim-session-manager
 	HUAHUAI23/telescope-session.nvim
+	LintaoAmons/cd-project.nvim
+
+scratch file/todo list
+	LintaoAmons/scratch.nvim
+	Selyss/mind.nvim
+	rguruprakash/simple-note.nvim
+	swaits/scratch.nvim
+	2KAbhishek/tdo.nvim
 
 git manager
-TODO: neogit but update the :Git command vs lazygit in toggleterm
 	NeogitOrg/neogit
 	kdheepak/lazygit.nvim
-
-TODO: pick a better colorscheme
-
-https://github.com/akinsho/toggleterm.nvim?tab=readme-ov-file#custom-terminals
 
 --]]
 
@@ -54,6 +57,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins", {
-	install = { colorscheme = { "sonokai" } },
+	install = { colorscheme = { "everforest" } },
 	change_detection = { notify = false },
 })
