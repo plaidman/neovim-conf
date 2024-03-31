@@ -6,29 +6,10 @@ require("options")
 require("keymaps")
 require("autocmd")
 
---[[ TODO:
+--[[ TODO: checkout new plugins
 
 https://www.trackawesomelist.com/rockerBOO/awesome-neovim/readme/
 https://www.lazyvim.org/
-
-organize leader combos
-	tris203/hawtkeys.nvim
-	echasnovski/mini.clue
-	folke/which-key.nvim
-
-startup screen
-	goolord/alpha-nvim
-	nvimdev/dashboard-nvim
-	echasnovski/mini.starter
-
-session manager plugin
-	echasnovski/mini.sessions
-	rmagatti/auto-session
-	folke/persistence.nvim
-	gennaro-tedesco/nvim-possession
-	Shatur/neovim-session-manager
-	HUAHUAI23/telescope-session.nvim
-	LintaoAmons/cd-project.nvim
 
 scratch file/todo list
 	LintaoAmons/scratch.nvim

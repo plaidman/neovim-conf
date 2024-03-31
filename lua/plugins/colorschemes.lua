@@ -15,28 +15,13 @@ return {
 	"sainnhe/everforest",
 	"sainnhe/gruvbox-material",
 	"sainnhe/sonokai",
-	-- {
-	-- 	"catppuccin/nvim",
-	-- 	lazy = false,
-	-- 	priority = 1000,
-	-- 	config = function()
-	-- 		vim.cmd("colorscheme catppuccin-mocha")
-	-- 	end,
-	-- },
-	-- {
-	-- 	"rebelot/kanagawa.nvim",
-	-- 	lazy = false,
-	-- 	priority = 1000,
-	-- 	config = function()
-	-- 		vim.cmd("colorscheme kanagawa-dragon")
-	-- 	end,
-	-- },
+
 	{
 		"EdenEast/nightfox.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			-- NOTE run :NightfoxCompile first run
+			-- NOTE: run :NightfoxCompile first run
 
 			require("nightfox").setup({
 				options = {
@@ -49,6 +34,8 @@ return {
 			-- vim.cmd("colorscheme carbonfox")
 		end,
 	},
+
+	-- TODO: finish setting up colors - and a way to switch between day and night
 	-- {
 	-- 	"sainnhe/everforest",
 	-- 	lazy = false,

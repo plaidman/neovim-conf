@@ -1,3 +1,5 @@
+-- TODO: check out lsp-zero
+
 return {
 	{ "williamboman/mason.nvim", build = ":MasonUpdate" },
 
