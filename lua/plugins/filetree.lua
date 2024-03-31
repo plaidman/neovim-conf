@@ -21,8 +21,8 @@ return {
 				use_default_keymaps = false,
 			})
 
-	 		vim.keymap.set("n", "<leader>fe", ":Oil .<cr>")
-	 		vim.keymap.set("n", "<leader>fE", ":Oil %:h<cr>")
+	 		vim.keymap.set("n", "<leader>fe", "<cmd>Oil .<cr>")
+	 		vim.keymap.set("n", "<leader>fE", "<cmd>Oil %:h<cr>")
 		end,
 	},
 }

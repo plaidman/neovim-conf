@@ -31,6 +31,6 @@ return {
 			harpoon:list():select(4)
 		end)
 
-		vim.keymap.set("n", "<leader>q", ":bd<cr>")
+		vim.keymap.set("n", "<leader>q", "<cmd>bd<cr>")
 	end,
 }
