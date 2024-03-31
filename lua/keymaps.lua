@@ -29,7 +29,7 @@ map({ "x", "i", "n" }, "<s-left>", "<left>")
 map({ "x", "i", "n" }, "<s-right>", "<right>")
 
 -- copy and paste to system keyboard
--- osc52 clipboard plugin
+-- maybe use osc52 clipboard plugin
 map({ "n", "x" }, "<leader>y", '"+y')
 map("n", "<leader>Y", '"+yg_')
 map("n", "<leader>yy", '"+yy')
@@ -56,9 +56,3 @@ map({ "n", "i" }, "<d-left>", "<home>")
 map({ "n", "x" }, "x", '"_x')
 map({ "n", "x" }, "X", '"_X')
 map({ "n", "x" }, "<del>", '"_x')
-
--- j/k should go up/down through VISIBLE lines, even if real lines wrap.
-map({ "n", "x" }, "j", "gj")
-map({ "n", "x" }, "<down>", "gj")
-map({ "n", "x" }, "k", "gk")
-map({ "n", "x" }, "<up>", "gk")

@@ -7,6 +7,7 @@ vim.opt.signcolumn = "yes" -- signcolumn for git symbols, folding, etc
 vim.opt.scrolloff = 5 -- number of lines to keep above and below cursor
 vim.opt.colorcolumn = "120" -- 120 character column marker
 vim.opt.termguicolors = true -- 24 bit color mode
+vim.opt.wrap = false -- line wrapping
 
 -- searching and replacing --
 vim.opt.ignorecase = true -- case-insensitive searching
