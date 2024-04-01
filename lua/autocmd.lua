@@ -27,3 +27,22 @@ autocmd("BufWritePre", {
 -- 	end
 -- })
 
+vim.api.nvim_create_user_command("ColorToggle", function(args)
+	local cur_color = vim.g.colors_name
+	local color_table = {
+		-- NOTE: you can add new items to the rotation.
+		sonokai = "dayfox",
+		dayfox = "sonokai",
+	}
+	local new_color = color_table[cur_color] or "dayfox"
+
+	if args.fargs[1] == "dark" then
+		new_color = "sonokai"
+	elseif args.fargs[1] == "light" then
+		new_color = "dayfox"
+	end
+
+	print(cur_color .. " -> " .. new_color)
+	vim.cmd.colorscheme(new_color)
+end, { nargs = "?" })
+
