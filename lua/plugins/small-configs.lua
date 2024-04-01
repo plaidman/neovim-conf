@@ -4,6 +4,17 @@ return {
 	{ "kylechui/nvim-surround", opts = {} },
 
 	{
+		"echasnovski/mini.bufremove",
+		config = function()
+			require("mini.bufremove").setup()
+
+			vim.keymap.set("n", "<leader>q", function()
+				require("mini.bufremove").delete()
+			end)
+		end,
+	},
+
+	{
 		"NeogitOrg/neogit",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
