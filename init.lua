@@ -38,6 +38,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins", {
-	install = { colorscheme = { "everforest" } },
+	install = { colorscheme = { "dayfox" } },
 	change_detection = { notify = false },
 })

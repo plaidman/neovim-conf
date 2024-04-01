@@ -1,20 +1,32 @@
 return {
-	"catppuccin/nvim",
-	"EdenEast/nightfox.nvim",
+	-- "catppuccin/nvim",
+	-- "EdenEast/nightfox.nvim",
 	"folke/tokyonight.nvim",
-	"olimorris/onedarkpro.nvim",
 	"marko-cerovac/material.nvim",
 	"Mofiqul/vscode.nvim",
-	"navarasu/onedark.nvim",
+	-- "navarasu/onedark.nvim",
 	"projekt0n/github-nvim-theme",
 	"rebelot/kanagawa.nvim",
 	"ribru17/bamboo.nvim",
-	"rose-pine/neovim",
-	"sainnhe/edge",
-	-- "neanias/everforest-nvim",
-	"sainnhe/everforest",
+	-- "rose-pine/neovim",
+	-- "sainnhe/edge",
+	-- "sainnhe/everforest",
 	"sainnhe/gruvbox-material",
-	"sainnhe/sonokai",
+	-- "sainnhe/sonokai",
+
+	{
+		"sainnhe/sonokai", -- best dark mode
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.g.sonokai_style = "default"
+			vim.g.sonokai_diagnostic_text_highlight = 1
+			vim.g.sonokai_diagnostic_virtual_text = "colored"
+			vim.g.sonokai_better_performance = 1
+
+			-- vim.cmd("colorscheme sonokai")
+		end,
+	},
 
 	{
 		"EdenEast/nightfox.nvim",
@@ -28,21 +40,78 @@ return {
 					styles = { comments = "italic" },
 				},
 			})
+
 			vim.cmd("colorscheme dayfox")
-			-- vim.cmd("colorscheme nordfox")
-			-- vim.cmd("colorscheme terafox")
-			-- vim.cmd("colorscheme carbonfox")
 		end,
 	},
 
-	-- TODO: finish setting up colors - and a way to switch between day and night
-	-- {
-	-- 	"sainnhe/everforest",
-	-- 	lazy = false,
-	-- 	priority = 1000,
-	-- 	config = function()
-	-- 		vim.cmd("colorscheme everforest")
-	-- 	end,
-	-- },
-}
+	{
+		"navarasu/onedark.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("onedark").setup({
+				style = "light",
+			})
 
+			-- vim.cmd("colorscheme onedark")
+		end,
+	},
+
+	{
+		"rose-pine/neovim",
+		name = "rose-pine",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("rose-pine").setup({
+				variant = "dawn",
+			})
+
+			-- vim.cmd("colorscheme rose-pine")
+		end,
+	},
+
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("catppuccin").setup({
+				flavour = "latte",
+			})
+
+			-- vim.cmd("colorscheme catppuccin")
+		end,
+	},
+
+	{
+		"sainnhe/edge",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.g.edge_style = "default"
+			vim.g.edge_diagnostic_text_highlight = 1
+			vim.g.edge_diagnostic_virtual_text = "colored"
+			vim.g.edge_better_performance = 1
+
+			-- vim.cmd("colorscheme edge")
+		end,
+	},
+
+	-- TODO: quick switch between dark and light mode
+	{
+		"sainnhe/everforest",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.g.everforest_background = "hard"
+			vim.g.everforest_diagnostic_text_highlight = 1
+			vim.g.everforest_diagnostic_virtual_text = "colored"
+			vim.g.everforest_better_performance = 1
+
+			-- vim.cmd("colorscheme everforest")
+		end,
+	},
+}
