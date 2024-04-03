@@ -1,32 +1,51 @@
---[[ TODO: startup screen
-	project list
-	new file
-	config
-	quit
-	update lazy
-	update mason
-
-	need to be able to separate into groups
-
-	goolord/alpha-nvim
-	nvimdev/dashboard-nvim
-	echasnovski/mini.starter
---]]
-
 return {
+	{
+		"echasnovski/mini.starter",
+		config = function()
+			local starter = require("mini.starter")
+			starter.setup({
+				header = [[
+					  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
+					  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║
+					  ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║
+					  ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
+					  ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
+					  ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
+				]],
+				items = {
+					starter.sections.sessions(6, true),
+					starter.sections.recent_files(6, false),
+					{ name = "New File", action = "enew", section = "Neovim Actions" },
+					{ name = "Oil CWD", action = "Oil", section = "Neovim Actions" },
+					{ name = "CWD Files", action = "Telescope find_files", section = "Neovim Actions" },
+					{
+						name = "Config Files",
+						action = 'Telescope find_files cwd="~/.config/nvim"',
+						section = "Neovim Actions",
+					},
+					{ name = "Plugin Update", action = "Lazy update", section = "Neovim Actions" },
+					{ name = "LSP Update (press U)", action = "Mason", section = "Neovim Actions" },
+					{ name = "Quit", action = "qa", section = "Neovim Actions" },
+				},
+			})
+		end,
+	},
+
 	{
 		"echasnovski/mini.sessions",
 		version = false,
 		config = function()
 			local sessions = require("mini.sessions")
-			local directory = vim.fn.stdpath('data') .. '/session'
+			local directory = vim.fn.stdpath("data") .. "/session"
 
 			sessions.setup({
 				directory = directory,
-				file = '',
+				file = "",
 			})
 
-			vim.keymap.set("n", "<leader>sl", function() sessions.select() end)
+			vim.keymap.set("n", "<leader>sl", function()
+				sessions.select()
+			end)
 			vim.api.nvim_create_user_command("SessionFolder", "e " .. directory, {})
 
 			vim.api.nvim_create_user_command("SessionCreate", function(args)
@@ -38,31 +57,4 @@ return {
 			end, { bang = true })
 		end,
 	},
-
-	-- {
-	-- 	"nvimdev/dashboard-nvim",
-	-- 	event = "VimEnter",
-	-- 	dependencies = { { "nvim-tree/nvim-web-devicons" } },
-	--
-	-- 	config = function()
-	-- 		require("dashboard").setup({})
-	-- 	end,
-	-- },
-	-- {
-	-- 	"goolord/alpha-nvim",
-	-- 	dependencies = {
-	-- 		"nvim-tree/nvim-web-devicons",
-	-- 		"nvim-lua/plenary.nvim",
-	-- 	},
-	-- 	config = function()
-	-- 		require("alpha").setup(require("alpha.themes.theta").config)
-	-- 	end,
-	-- },
-	-- {
-	-- 	'echasnovski/mini.starter',
-	-- 	version = false,
-	-- 	config = function()
-	-- 		require("mini.starter").setup()
-	-- 	end
-	-- },
 }
