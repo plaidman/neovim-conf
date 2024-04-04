@@ -1,7 +1,7 @@
 -- ui options --
 vim.opt.number = true -- show line numbers
 vim.opt.relativenumber = true -- and relative numbers
-vim.opt.timeoutlen = 300 -- shows the which-key dialog sooner
+-- vim.opt.timeoutlen = 300 -- shows the which-key dialog sooner
 vim.opt.signcolumn = "yes" -- signcolumn for git symbols, folding, etc
 -- vim.opt.cursorline = true -- highlight line your cursor is on
 vim.opt.scrolloff = 5 -- number of lines to keep above and below cursor

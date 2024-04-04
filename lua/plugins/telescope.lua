@@ -9,15 +9,15 @@ return {
 		branch = "0.1.x",
 		cmd = "Telescope",
 		keys = {
-			"<leader>ft",
+			"<leader>ff",
 			"<c-p>",
 			"<leader>fg",
 			"<leader>fb",
-			"<leader>u",
-			"<leader>fh",
-			"<leader>fr",
-			'<leader>*',
 			"<leader>fn",
+			"<leader>cd",
+			"<leader>cr",
+			"<leader>u",
+			"<leader>*",
 		},
 
 		dependencies = {
@@ -59,17 +59,19 @@ return {
 			--   ctrl-q to put all entries in the quick fix,
 			--   then :cfdo %s/find/replace/g to find and replace all the things
 
-			vim.keymap.set("n", "<leader>ft", builtin.find_files)
+			vim.keymap.set("n", "<leader>ff", builtin.find_files)
 			vim.keymap.set("n", "<c-p>", builtin.find_files)
 			vim.keymap.set("n", "<leader>fg", builtin.live_grep)
 			vim.keymap.set("n", "<leader>fb", builtin.buffers)
-			vim.keymap.set("n", "<leader>u", require("telescope").extensions.undo.undo)
-			vim.keymap.set("n", "<leader>fh", builtin.help_tags)
-			vim.keymap.set("n", "<leader>fr", builtin.registers)
-			vim.keymap.set('n', "<leader>*", builtin.grep_string)
 			vim.keymap.set("n", "<leader>fn", function()
 				builtin.find_files({ cwd = vim.fn.stdpath("config") })
 			end)
+
+			vim.keymap.set("n", "<leader>cd", builtin.lsp_definitions)
+			vim.keymap.set("n", "<leader>cr", builtin.lsp_references)
+
+			vim.keymap.set("n", "<leader>u", require("telescope").extensions.undo.undo)
+			vim.keymap.set("n", "<leader>*", builtin.grep_string)
 		end,
 	},
 }

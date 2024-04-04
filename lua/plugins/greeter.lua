@@ -43,7 +43,7 @@ return {
 				file = "",
 			})
 
-			vim.keymap.set("n", "<leader>sl", function()
+			vim.keymap.set("n", "<leader>fs", function()
 				sessions.select()
 			end)
 			vim.api.nvim_create_user_command("SessionFolder", "e " .. directory, {})

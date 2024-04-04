@@ -43,9 +43,9 @@ map("x", "<tab>", ">gv")
 map("x", "<s-tab>", "<gv")
 map("i", "<s-tab>", "<esc>V<A")
 
--- select all text, like ctrl-a
-map("n", "<leader>a", "ggVG")
-map("x", "<leader>a", "<esc>ggVG")
+-- select all text
+map("n", "<c-a>", "ggVG")
+map("x", "<c-a>", "<esc>ggVG")
 
 -- cmd left and right act like home and end
 -- NOTE: this doesn't work in TUI

@@ -14,6 +14,65 @@ organize leader combos
 	echasnovski/mini.clue
 	folke/which-key.nvim
 
+	code actions: ,c (for code)
+		show hover: ,ch
+		list definition: ,cd
+		list references: ,cr
+		code action: ,ca
+		rename symbol: ,cn (for reName)
+
+	telescope: ,f (for find)
+		file names: ,ff
+		grep in files: ,fg
+		list buffers: ,fb
+		list config files: ,fn
+
+	oil: :Oil
+		explore cwd: :OilCwd
+		explore current file's folder: :OilFileDir
+
+	session: :Session
+		create new session :SessionCreate
+		delete session: :SessionDelete
+		open session folder: :SessionFolder
+		session list: ,fs
+
+	window navigation: ,w (for window)
+		split: ,ws
+		v-split: ,wv
+		close: ,wq
+		next window: ,ww
+
+	yank, paste system clipboard
+		yank: ,y
+		paste: ,p
+
+	close current buffer: ,q
+	toggle comment: ,/
+	formatter: ,=
+	show undo list: ,u
+	grep current hovered word ,*
+
+	select all text: <c-a>
+
+	forward/back diagnostics: [d ]d
+	forward/back quickfix: [q ]q
+
+	--- DONE ^
+	--- TODO v
+
+	harpoon:
+		add to list: gh
+		show list: gH
+	buffer switch: g1 g2 g3 g4
+
+	git: ,g (for git) TODO maybe :Command?
+		show neogit: ,gn
+		show lazygit: ,gt
+		TODO somethings with gitsigns?
+
+	toggle terminal: <c-t> TODO something?
+
 --]]
 
 return {

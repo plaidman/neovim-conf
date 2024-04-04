@@ -21,8 +21,9 @@ return {
 				use_default_keymaps = false,
 			})
 
-	 		vim.keymap.set("n", "<leader>fe", "<cmd>Oil .<cr>")
-	 		vim.keymap.set("n", "<leader>fE", "<cmd>Oil %:h<cr>")
+			vim.api.nvim_create_user_command("OilCwd", "Oil .", {})
+			vim.api.nvim_create_user_command("OilFileDir", "Oil", {})
 		end,
 	},
+
 }
