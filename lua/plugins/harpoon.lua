@@ -7,11 +7,15 @@ return {
 		---@diagnostic disable-next-line: missing-parameter
 		harpoon.setup()
 
-		vim.keymap.set("n", "<leader>h", function()
-			harpoon:list():append()
+		vim.keymap.set("n", "<leader>ha", function()
+			harpoon:list():add()
 		end)
 
-		vim.keymap.set("n", "<leader>H", function()
+		vim.keymap.set("n", "<leader>fh", function()
+			harpoon.ui:toggle_quick_menu(harpoon:list())
+		end)
+
+		vim.keymap.set("n", "<leader>hl", function()
 			harpoon.ui:toggle_quick_menu(harpoon:list())
 		end)
 

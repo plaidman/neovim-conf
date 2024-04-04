@@ -20,10 +20,21 @@ return {
 			"nvim-lua/plenary.nvim",
 			"sindrets/diffview.nvim",
 			"nvim-telescope/telescope.nvim",
+			"akinsho/toggleterm.nvim",
 		},
 		config = function()
 			require("neogit").setup({})
-			vim.keymap.set("n", "<leader>gn", "<cmd>Neogit<cr>")
+
+			local Terminal = require("toggleterm.terminal").Terminal
+			local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
+
+			vim.api.nvim_create_user_command("Git", function(args)
+				if args.fargs[1] == "lazy" then
+					lazygit:toggle()
+				else
+					require("neogit").open({ args.fargs[1] })
+				end
+			end, { nargs = "?" })
 		end,
 	},
 
@@ -33,18 +44,12 @@ return {
 		config = function()
 			require("toggleterm").setup({ direction = "float" })
 			vim.keymap.set({ "n", "t" }, "<c-t>", "<cmd>ToggleTerm<cr>")
-
-			local Terminal = require("toggleterm.terminal").Terminal
-			local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
-
-			vim.keymap.set("n", "<leader>gt", function()
-				lazygit:toggle()
-			end)
 		end,
 	},
 
 	{
 		"lewis6991/gitsigns.nvim",
+		-- TODO: learn how to do stuff inline
 		opts = {
 			current_line_blame = true,
 			signs = {

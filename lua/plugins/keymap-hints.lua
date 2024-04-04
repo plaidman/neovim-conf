@@ -47,6 +47,15 @@ organize leader combos
 		yank: ,y
 		paste: ,p
 
+	harpoon: ,h
+		add to list: ,ha
+		show list: ,hl or ,fh
+	buffer switch: ,1 ,2 ,3 ,4
+
+	git: :Git
+		show neogit: :Git
+		show lazygit: :Git lazy
+
 	close current buffer: ,q
 	toggle comment: ,/
 	formatter: ,=
@@ -54,24 +63,10 @@ organize leader combos
 	grep current hovered word ,*
 
 	select all text: <c-a>
+	toggle terminal: <c-t>
 
 	forward/back diagnostics: [d ]d
 	forward/back quickfix: [q ]q
-
-	--- DONE ^
-	--- TODO v
-
-	harpoon:
-		add to list: gh
-		show list: gH
-	buffer switch: g1 g2 g3 g4
-
-	git: ,g (for git) TODO maybe :Command?
-		show neogit: ,gn
-		show lazygit: ,gt
-		TODO somethings with gitsigns?
-
-	toggle terminal: <c-t> TODO something?
 
 --]]
 

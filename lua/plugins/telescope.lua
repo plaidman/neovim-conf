@@ -9,6 +9,7 @@ return {
 		branch = "0.1.x",
 		cmd = "Telescope",
 		keys = {
+			"<leader>ft",
 			"<leader>ff",
 			"<c-p>",
 			"<leader>fg",
@@ -59,6 +60,7 @@ return {
 			--   ctrl-q to put all entries in the quick fix,
 			--   then :cfdo %s/find/replace/g to find and replace all the things
 
+			vim.keymap.set("n", "<leader>ft", builtin.find_files)
 			vim.keymap.set("n", "<leader>ff", builtin.find_files)
 			vim.keymap.set("n", "<c-p>", builtin.find_files)
 			vim.keymap.set("n", "<leader>fg", builtin.live_grep)
