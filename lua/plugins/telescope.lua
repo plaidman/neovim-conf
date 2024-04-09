@@ -8,17 +8,17 @@ return {
 		"nvim-telescope/telescope.nvim",
 		branch = "0.1.x",
 		cmd = "Telescope",
+
 		keys = {
-			"<leader>ft",
-			"<leader>ff",
-			"<c-p>",
-			"<leader>fg",
-			"<leader>fb",
-			"<leader>fn",
-			"<leader>cd",
-			"<leader>cr",
-			"<leader>u",
-			"<leader>*",
+			{ "<leader>ft", desc = "[F]ind Files" },
+			{ "<c-p>", desc = "Find Files" },
+			{ "<leader>fg", desc = "[F]ind Text [G]rep" },
+			{ "<leader>fb", desc = "[F]ind [B]uffers" },
+			{ "<leader>fn", desc = "[F]ind [N]eovim Config" },
+			{ "<leader>cd", desc = "[C]ode [D]efinitions" },
+			{ "<leader>cr", desc = "[C]ode [R]eferences" },
+			{ "<leader>u", desc = "[U]ndo Tree" },
+			{ "<leader>*", desc = "Find Current Word" },
 		},
 
 		dependencies = {
@@ -31,12 +31,41 @@ return {
 		},
 
 		config = function()
+			local actions = require("telescope.actions")
+
 			require("telescope").setup({
+				defaults = {
+					mappings = {
+						n = {
+							["<c-q>"] = actions.smart_send_to_qflist + actions.open_qflist,
+							["<c-up>"] = actions.preview_scrolling_up,
+							["<c-down>"] = actions.preview_scrolling_down,
+						},
+						i = {
+							["<c-q>"] = actions.smart_send_to_qflist + actions.open_qflist,
+							["<c-up>"] = actions.preview_scrolling_up,
+							["<c-down>"] = actions.preview_scrolling_down,
+						},
+					}
+				},
+
 				pickers = {
 					colorscheme = {
 						enable_preview = true,
 					},
+
+					buffers = {
+						mappings = {
+							n = {
+								["<c-x>"] = actions.delete_buffer,
+							},
+							i = {
+								["<c-x>"] = actions.delete_buffer,
+							},
+						},
+					},
 				},
+
 				extensions = {
 					["ui-select"] = {
 						require("telescope.themes").get_dropdown({}),
@@ -56,24 +85,23 @@ return {
 
 			local builtin = require("telescope.builtin")
 
-			-- tip: grep something,
+			-- NOTE: tip: grep something,
 			--   ctrl-q to put all entries in the quick fix,
 			--   then :cfdo %s/find/replace/g to find and replace all the things
 
-			vim.keymap.set("n", "<leader>ft", builtin.find_files)
-			vim.keymap.set("n", "<leader>ff", builtin.find_files)
-			vim.keymap.set("n", "<c-p>", builtin.find_files)
-			vim.keymap.set("n", "<leader>fg", builtin.live_grep)
-			vim.keymap.set("n", "<leader>fb", builtin.buffers)
+			vim.keymap.set("n", "<leader>ft", builtin.find_files, { desc = "[F]ind Files" })
+			vim.keymap.set("n", "<c-p>", builtin.find_files, { desc = "Find Files" })
+			vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "[F]ind Text [G]rep" })
+			vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "[F]ind [B]uffers" })
 			vim.keymap.set("n", "<leader>fn", function()
 				builtin.find_files({ cwd = vim.fn.stdpath("config") })
-			end)
+			end, { desc = "[F]ind [N]eovim Config" })
 
-			vim.keymap.set("n", "<leader>cd", builtin.lsp_definitions)
-			vim.keymap.set("n", "<leader>cr", builtin.lsp_references)
+			vim.keymap.set("n", "<leader>cd", builtin.lsp_definitions, { desc = "[C]ode [D]efinitions" })
+			vim.keymap.set("n", "<leader>cr", builtin.lsp_references, { desc = "[C]ode [R]eferences" })
 
-			vim.keymap.set("n", "<leader>u", require("telescope").extensions.undo.undo)
-			vim.keymap.set("n", "<leader>*", builtin.grep_string)
+			vim.keymap.set("n", "<leader>u", require("telescope").extensions.undo.undo, { desc = "[U]ndo Tree" })
+			vim.keymap.set("n", "<leader>*", builtin.grep_string, { desc = "Find Current Word" })
 		end,
 	},
 }

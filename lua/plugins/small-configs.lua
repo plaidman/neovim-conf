@@ -9,8 +9,9 @@ return {
 			require("mini.bufremove").setup()
 
 			vim.keymap.set("n", "<leader>q", function()
+				-- TODO: maybe check to see if buffer is neogit, then ignore or :closetab
 				require("mini.bufremove").delete()
-			end)
+			end, { desc = "[Q]uit buffer" })
 		end,
 	},
 
@@ -22,7 +23,9 @@ return {
 			"nvim-telescope/telescope.nvim",
 			"akinsho/toggleterm.nvim",
 		},
+		cmd = "Git",
 		config = function()
+			-- TODO: learn how to resolve merge conflicts
 			require("neogit").setup({})
 
 			local Terminal = require("toggleterm.terminal").Terminal
@@ -65,8 +68,8 @@ return {
 	{
 		"numToStr/Comment.nvim",
 		config = function()
-			vim.keymap.set("n", "<leader>/", "<Plug>(comment_toggle_linewise_current)")
-			vim.keymap.set("x", "<leader>/", "<Plug>(comment_toggle_linewise_visual)")
+			vim.keymap.set("n", "<leader>/", "<Plug>(comment_toggle_linewise_current)", { desc = "Comment Line" })
+			vim.keymap.set("x", "<leader>/", "<Plug>(comment_toggle_linewise_visual)", { desc = "Comment Lines" })
 		end,
 	},
 

@@ -27,16 +27,6 @@ organize leader combos
 		list buffers: ,fb
 		list config files: ,fn
 
-	oil: :Oil
-		explore cwd: :OilCwd
-		explore current file's folder: :OilFileDir
-
-	session: :Session
-		create new session :SessionCreate
-		delete session: :SessionDelete
-		open session folder: :SessionFolder
-		session list: ,fs
-
 	window navigation: ,w (for window)
 		split: ,ws
 		v-split: ,wv
@@ -51,6 +41,16 @@ organize leader combos
 		add to list: ,ha
 		show list: ,hl or ,fh
 	buffer switch: ,1 ,2 ,3 ,4
+
+	oil: :Oil
+		explore cwd: :OilCwd
+		explore current file's folder: :OilFileDir
+
+	session: :Session
+		create new session :SessionCreate
+		delete session: :SessionDelete
+		open session folder: :SessionFolder
+		session list: ,fs
 
 	git: :Git
 		show neogit: :Git
@@ -71,4 +71,75 @@ organize leader combos
 --]]
 
 return {
+	{
+		"echasnovski/mini.clue",
+		version = false,
+		config = function()
+			local miniclue = require("mini.clue")
+
+			miniclue.setup({
+				window = {
+					config = {
+						width = "auto",
+					},
+				},
+
+				triggers = {
+					-- Leader triggers
+					{ mode = "n", keys = "<Leader>" },
+					{ mode = "x", keys = "<Leader>" },
+
+					-- Built-in completion
+					{ mode = "i", keys = "<C-x>" },
+
+					-- `g` key
+					{ mode = "n", keys = "g" },
+					{ mode = "x", keys = "g" },
+
+					-- Marks
+					{ mode = "n", keys = "'" },
+					{ mode = "n", keys = "`" },
+					{ mode = "x", keys = "'" },
+					{ mode = "x", keys = "`" },
+
+					-- Registers
+					{ mode = "n", keys = '"' },
+					{ mode = "x", keys = '"' },
+					{ mode = "i", keys = "<C-r>" },
+					{ mode = "c", keys = "<C-r>" },
+
+					-- Window commands
+					{ mode = "n", keys = "<C-w>" },
+
+					-- `z` key
+					{ mode = "n", keys = "z" },
+					{ mode = "x", keys = "z" },
+
+					-- special navigation
+					{ mode = "n", keys = "[" },
+					{ mode = "n", keys = "]" },
+				},
+
+				clues = {
+					miniclue.gen_clues.builtin_completion(),
+					miniclue.gen_clues.g(),
+					miniclue.gen_clues.marks(),
+					miniclue.gen_clues.registers(),
+					miniclue.gen_clues.windows({
+						submode_move = true,
+						submode_navigate = true,
+						submode_resize = true,
+					}),
+					miniclue.gen_clues.z(),
+
+					{ mode = "n", keys = "<leader>c", desc = "+LSP [C]ode" },
+					{ mode = "n", keys = "<leader>w", desc = "+[W]indow" },
+					{ mode = "n", keys = "<leader>f", desc = "+[F]ind" },
+					{ mode = "n", keys = "<leader>h", desc = "+[H]arpoon" },
+					{ mode = "n", keys = "[", desc = "+Prev Item" },
+					{ mode = "n", keys = "]", desc = "+Next Item" },
+				},
+			})
+		end,
+	},
 }

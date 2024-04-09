@@ -45,7 +45,8 @@ return {
 
 			vim.keymap.set("n", "<leader>fs", function()
 				sessions.select()
-			end)
+			end, { desc = "[F]ind [S]ession" })
+
 			vim.api.nvim_create_user_command("SessionFolder", "e " .. directory, {})
 
 			vim.api.nvim_create_user_command("SessionCreate", function(args)

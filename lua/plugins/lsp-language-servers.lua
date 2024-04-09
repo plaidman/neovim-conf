@@ -28,16 +28,19 @@ return {
 				})
 			end
 
-			vim.keymap.set("n", "<leader>ch", vim.lsp.buf.hover)
-			vim.keymap.set("n", "<leader>cn", vim.lsp.buf.rename)
-			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+			vim.keymap.set("n", "<leader>ch", vim.lsp.buf.hover, { desc = "[C]ode [H]over" })
+			vim.keymap.set("n", "<leader>cn", vim.lsp.buf.rename, { desc = "[C]ode re[N]ame" })
+			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "[C]ode [A]ction" })
 		end,
 	},
 
 	{
 		"stevearc/conform.nvim",
 		event = { "BufWritePre" },
-		keys = { "<leader>=" },
+		keys = {
+			{"<leader>=", desc = "Format Code" },
+			{"<leader>cf", desc = "[C]ode [F]ormat" },
+		},
 		config = function()
 			require("conform").setup({
 				formatters_by_ft = {
@@ -45,9 +48,13 @@ return {
 				},
 			})
 
-			vim.keymap.set("n", "<leader>=", function()
+			local format_code = function()
 				require("conform").format({ async = true, lsp_fallback = true })
-			end)
+			end
+
+			-- TODO: format selected lines
+			vim.keymap.set({ "n", "x" }, "<leader>cf", format_code, { desc = "[C]ode [F]ormat" })
+			vim.keymap.set({ "n", "x" }, "<leader>=", format_code, { desc = "Format Code" })
 		end,
 	},
 	-- { "mfussenegger/nvim-lint" }

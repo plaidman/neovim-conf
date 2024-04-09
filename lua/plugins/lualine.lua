@@ -13,6 +13,8 @@ return {
 			end,
 		})
 
+		-- TODO: hide git branch if small width
+
 		local lualine_c = { harpoonline.format, "filename" }
 		require("lualine").setup({ sections = { lualine_c = lualine_c } })
 
