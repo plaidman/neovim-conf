@@ -1,4 +1,4 @@
---[[ TODO: leader combo hints
+--[[
 
 organize leader combos
 	organize keymaps
@@ -32,6 +32,12 @@ organize leader combos
 		v-split: ,wv
 		close: ,wq
 		next window: ,ww
+
+	tab navigation: ,t
+		tab quit: ,tq
+		tab new: ,tt
+		tab next: ,tn
+		tab prev: ,tp
 
 	yank, paste system clipboard
 		yank: ,y
@@ -67,6 +73,7 @@ organize leader combos
 
 	forward/back diagnostics: [d ]d
 	forward/back quickfix: [q ]q
+	forward/back tab: [t ]t
 
 --]]
 
@@ -134,6 +141,7 @@ return {
 
 					{ mode = "n", keys = "<leader>c", desc = "+LSP [C]ode" },
 					{ mode = "n", keys = "<leader>w", desc = "+[W]indow" },
+					{ mode = "n", keys = "<leader>t", desc = "+[T]ab" },
 					{ mode = "n", keys = "<leader>f", desc = "+[F]ind" },
 					{ mode = "n", keys = "<leader>h", desc = "+[H]arpoon" },
 					{ mode = "n", keys = "[", desc = "+Prev Item" },

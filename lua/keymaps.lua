@@ -9,11 +9,19 @@ local map = vim.keymap.set
 -- terminal normal mode with double <esc>.
 map("t", "<esc><esc>", [[<c-\><c-n>]], { desc = "terminal normal mode" })
 
--- window split navigation
+-- window navigation
 map("n", "<leader>wq", "<c-w><c-q>", { desc = "[W]indow Close [Q]uit" })
 map("n", "<leader>wv", "<c-w><c-v>", { desc = "[W]indow [V]ert Split" })
 map("n", "<leader>ws", "<c-w><c-s>", { desc = "[W]indow [S]plit" })
 map("n", "<leader>ww", "<c-w><c-w>", { desc = "Next [W]indow" })
+
+-- tab navigation
+map("n", "<leader>tq", "<cmd>tabclose<cr>", { desc = "[T]ab [Q]uit" })
+map("n", "<leader>tt", "<cmd>tabnew<cr>", { desc = "New [T]ab" })
+map("n", "<leader>tn", "<cmd>tabnext<cr>", { desc = "[T]ab [N]ext" })
+map("n", "<leader>tp", "<cmd>tabprev<cr>", { desc = "[T]ab [P]rev" })
+map("n", "]t", "<cmd>tabnext<cr>", { desc = "Next [T]ab" })
+map("n", "[t", "<cmd>tabprev<cr>", { desc = "Prev [T]ab" })
 
 -- previous or next quickfix list
 map("n", "[q", "<cmd>cprevious<cr>", { desc = "Prev [Q]uickfix" })
