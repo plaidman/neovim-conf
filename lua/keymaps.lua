@@ -53,8 +53,8 @@ map("x", "<s-tab>", "<gv", { desc = "outdent" })
 map("i", "<s-tab>", "<esc>V<A", { desc = "outdent" })
 
 -- select all text
-map("n", "<c-a>", "ggVG", { desc = "select all" })
-map("x", "<c-a>", "<esc>ggVG", { desc = "select all" })
+map("n", "<leader>a", "ggVG", { desc = "Select [A]ll" })
+map("x", "<leader>a", "<esc>ggVG", { desc = "Select [A]ll" })
 
 -- cmd left and right act like home and end
 -- NOTE: this doesn't work in TUI
