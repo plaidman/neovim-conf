@@ -9,7 +9,11 @@ return {
 			require("mini.bufremove").setup()
 
 			vim.keymap.set("n", "<leader>q", function()
-				-- TODO: maybe check to see if buffer is neogit, then ignore or :closetab
+				if string.sub(vim.bo.filetype, 1, 6) == "Neogit" then
+					print("Use 'q' to quit neogit")
+					return
+				end
+
 				require("mini.bufremove").delete()
 			end, { desc = "[Q]uit buffer" })
 		end,
