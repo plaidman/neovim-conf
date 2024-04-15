@@ -44,6 +44,7 @@ return {
 			})
 
 			vim.keymap.set("n", "<leader>fs", function()
+				vim.cmd("Lazy load telescope.nvim")
 				sessions.select()
 			end, { desc = "[F]ind [S]ession" })
 

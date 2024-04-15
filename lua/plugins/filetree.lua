@@ -11,8 +11,8 @@ return {
 					go_in = "<s-enter>",
 					go_in_plus = "<enter>",
 					go_out = "",
-					go_out_plus = "<s-left>",
-					reset = "<bs>",
+					go_out_plus = "-",
+					reset = "",
 					reveal_cwd = "_",
 					show_help = "g?",
 					synchronize = "=",
@@ -60,13 +60,15 @@ return {
 				local cur_entry_path = MiniFiles.get_fs_entry().path
 				local cur_directory = vim.fs.dirname(cur_entry_path)
 				print("changed to" .. cur_directory)
-				vim.fn.chdir(cur_directory)
+				-- cd for all windows, because Neogit tends to set lcd for the current window
+				vim.cmd.windo("cd " .. cur_directory)
 			end
 
 			vim.api.nvim_create_autocmd("User", {
 				pattern = "MiniFilesBufferCreate",
 				callback = function(args)
 					vim.keymap.set("n", "<s-right>", go_in_folder_only, { buffer = args.data.buf_id })
+					vim.keymap.set("n", "<s-left>", MiniFiles.go_out, { buffer = args.data.buf_id })
 					vim.keymap.set("n", "`", change_dir, { buffer = args.data.buf_id })
 					vim.keymap.set('n', 'g.', toggle_dotfiles, { buffer = args.data.buf_id })
 				end,
