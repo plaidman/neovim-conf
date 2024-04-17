@@ -9,6 +9,13 @@ local map = vim.keymap.set
 -- terminal normal mode with double <esc>.
 map("t", "<esc><esc>", [[<c-\><c-n>]], { desc = "terminal normal mode" })
 
+-- dot repeat and play macros on all lines of a selection
+map("x", ".", ":norm .<CR>", { desc = "apply dot repeat to all selected lines" })
+map("x", "@", ":norm @q<CR>", { desc = "apply q register macro to all selected lines" })
+
+-- jump back after searching with / or navigating with LSP (,cd ,cr etc)
+map("n", "<bs>", "<c-o>", { desc = "jump back" })
+
 -- window navigation
 map("n", "<leader>wq", "<c-w><c-q>", { desc = "[W]indow Close [Q]uit" })
 map("n", "<leader>wv", "<c-w><c-v>", { desc = "[W]indow [V]ert Split" })
