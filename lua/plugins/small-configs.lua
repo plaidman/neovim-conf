@@ -56,9 +56,11 @@ return {
 
 	{
 		"lewis6991/gitsigns.nvim",
-		-- TODO: learn how to do stuff inline
 		opts = {
-			current_line_blame = true,
+			current_line_blame = false,
+			current_line_blame_opts = {
+				delay = 500,
+			},
 			signs = {
 				add = { text = "+" },
 				change = { text = "~" },

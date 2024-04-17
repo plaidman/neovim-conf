@@ -9,22 +9,21 @@ return {
 	config = function()
 		require("trouble").setup({ auto_close = true })
 
-		vim.keymap.set("n", "]d", function()
+		local nav_trouble = function(direction)
 			if require("trouble").is_open() then
-				require("trouble").next({ skip_groups = true, jump = true })
+				require("trouble")[direction]({ skip_groups = true, jump = true })
 			else
 				require("trouble").open("workspace_diagnostics")
 				require("trouble").first({ skip_groups = true, jump = true })
 			end
+		end
+
+		vim.keymap.set("n", "]d", function()
+			nav_trouble('next')
 		end, { desc = "Next [D]iagnostic" })
 
 		vim.keymap.set("n", "[d", function()
-			if require("trouble").is_open() then
-				require("trouble").previous({ skip_groups = true, jump = true })
-			else
-				require("trouble").open("workspace_diagnostics")
-				require("trouble").first({ skip_groups = true, jump = true })
-			end
+			nav_trouble('previous')
 		end, { desc = "Prev [D]iagnostic" })
 	end,
 }
