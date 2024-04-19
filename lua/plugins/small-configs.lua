@@ -20,6 +20,20 @@ return {
 	},
 
 	{
+		"sindrets/diffview.nvim",
+		lazy = true,
+		config = function()
+			require("diffview").setup({
+				view = {
+					merge_tool = {
+						layout = "diff3_mixed",
+					},
+				},
+			})
+		end,
+	},
+
+	{
 		"NeogitOrg/neogit",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
