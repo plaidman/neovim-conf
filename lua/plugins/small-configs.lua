@@ -29,10 +29,17 @@ return {
 	},
 
 	{
-		"numToStr/Comment.nvim",
+		"echasnovski/mini.comment",
 		config = function()
-			vim.keymap.set("n", "<leader>/", "<Plug>(comment_toggle_linewise_current)", { desc = "Comment Line" })
-			vim.keymap.set("x", "<leader>/", "<Plug>(comment_toggle_linewise_visual)", { desc = "Comment Lines" })
+			require("mini.comment").setup({})
+
+			vim.keymap.set("x", "<leader>/", function()
+				return MiniComment.operator()
+			end, { expr = true, desc = "Comment Selection" })
+
+			vim.keymap.set("n", "<leader>/", function()
+				return MiniComment.operator() .. "_"
+			end, { expr = true, desc = "Comment Line" })
 		end,
 	},
 
