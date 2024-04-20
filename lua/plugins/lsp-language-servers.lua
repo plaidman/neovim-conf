@@ -38,8 +38,8 @@ return {
 		"stevearc/conform.nvim",
 		event = { "BufWritePre" },
 		keys = {
-			{"<leader>=", desc = "Format Code" },
-			{"<leader>cf", desc = "[C]ode [F]ormat" },
+			{ "<leader>=", desc = "Format Code" },
+			{ "<leader>cf", desc = "[C]ode [F]ormat" },
 		},
 		config = function()
 			require("conform").setup({
@@ -52,9 +52,8 @@ return {
 				require("conform").format({ async = true, lsp_fallback = true })
 			end
 
-			-- TODO: format selected lines
-			vim.keymap.set({ "n", "x" }, "<leader>cf", format_code, { desc = "[C]ode [F]ormat" })
-			vim.keymap.set({ "n", "x" }, "<leader>=", format_code, { desc = "Format Code" })
+			vim.keymap.set("n", "<leader>cf", format_code, { desc = "[C]ode [F]ormat" })
+			vim.keymap.set("n", "<leader>=", format_code, { desc = "Format Code" })
 		end,
 	},
 	-- { "mfussenegger/nvim-lint" }
