@@ -99,6 +99,7 @@ return {
 
 			vim.keymap.set("n", "<leader>cd", builtin.lsp_definitions, { desc = "[C]ode [D]efinitions" })
 			vim.keymap.set("n", "<leader>cr", builtin.lsp_references, { desc = "[C]ode [R]eferences" })
+			vim.keymap.set("n", "<leader>ci", builtin.lsp_implementations, { desc = "[C]ode [I]mplementations" })
 
 			vim.keymap.set("n", "<leader>u", require("telescope").extensions.undo.undo, { desc = "[U]ndo Tree" })
 			vim.keymap.set("n", "<leader>*", builtin.grep_string, { desc = "Find Current Word" })

@@ -14,7 +14,16 @@ return {
 		},
 
 		config = function()
-			local servers = { "lua_ls", "tsserver", "gopls", "eslint", "pyright", "rust_analyzer" }
+			local servers = {
+				"lua_ls",
+				"tsserver",
+				"gopls",
+				"eslint",
+				"pyright",
+				"rust_analyzer",
+				"zls",
+				"csharp_ls",
+			}
 
 			require("mason").setup()
 			require("mason-lspconfig").setup({ ensure_installed = servers })
@@ -29,6 +38,7 @@ return {
 			end
 
 			vim.keymap.set("n", "<leader>ch", vim.lsp.buf.hover, { desc = "[C]ode [H]over" })
+			vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Code Hover" })
 			vim.keymap.set("n", "<leader>cn", vim.lsp.buf.rename, { desc = "[C]ode re[N]ame" })
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "[C]ode [A]ction" })
 		end,

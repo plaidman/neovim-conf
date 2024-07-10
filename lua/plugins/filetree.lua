@@ -59,7 +59,7 @@ return {
 			local change_dir = function()
 				local cur_entry_path = MiniFiles.get_fs_entry().path
 				local cur_directory = vim.fs.dirname(cur_entry_path)
-				print("changed to" .. cur_directory)
+				print("changed to " .. cur_directory)
 				-- cd for all windows, because Neogit tends to set lcd for the current window
 				vim.cmd.windo("cd " .. cur_directory)
 			end
