@@ -23,7 +23,6 @@ return {
 				"pyright",
 				"rust_analyzer",
 				"zls",
-				-- "csharp_ls",
 				"omnisharp",
 			}
 
@@ -56,7 +55,10 @@ return {
 				},
 				settings = {
 					RoslynExtensionsOptions = {
+						-- enableAnalyzersSupport = true,
 						enableDecompilationSupport = true,
+						-- analyzeOpenDocumentsOnly = true,
+						enableImportCompletion = true,
 					},
 				},
 			})
