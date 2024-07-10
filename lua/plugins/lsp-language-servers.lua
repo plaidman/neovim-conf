@@ -11,6 +11,7 @@ return {
 			"williamboman/mason-lspconfig.nvim",
 			"folke/neodev.nvim",
 			"hrsh7th/cmp-nvim-lsp",
+			"Hoffs/omnisharp-extended-lsp.nvim",
 		},
 
 		config = function()
@@ -22,7 +23,8 @@ return {
 				"pyright",
 				"rust_analyzer",
 				"zls",
-				"csharp_ls",
+				-- "csharp_ls",
+				"omnisharp",
 			}
 
 			require("mason").setup()
@@ -32,10 +34,32 @@ return {
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
 			for _, server in pairs(servers) do
+				if server == "omnisharp" then
+					goto continue
+				end
+
 				lspconfig[server].setup({
 					capabilities = capabilities,
 				})
+
+				::continue::
 			end
+
+			lspconfig.omnisharp.setup({
+				capabilities = capabilities,
+				cmd = { "/Users/JTomsic/.local/share/nvim/mason/bin/omnisharp" },
+				handlers = {
+					["textDocument/definition"] = require('omnisharp_extended').definition_handler,
+					["textDocument/typeDefinition"] = require('omnisharp_extended').type_definition_handler,
+					["textDocument/references"] = require('omnisharp_extended').references_handler,
+					["textDocument/implementation"] = require('omnisharp_extended').implementation_handler,
+				},
+				settings = {
+					RoslynExtensionsOptions = {
+						enableDecompilationSupport = true,
+					},
+				},
+			})
 
 			vim.keymap.set("n", "<leader>ch", vim.lsp.buf.hover, { desc = "[C]ode [H]over" })
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Code Hover" })
