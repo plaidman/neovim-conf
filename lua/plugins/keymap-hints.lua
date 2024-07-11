@@ -21,6 +21,10 @@ organize leader combos
 		code action: ,ca
 		rename symbol: ,cn (for reName)
 
+	debugger: ,d (for debugger)
+		toggle breakpoint: ,db
+		start debugger: ,ds
+
 	telescope: ,f (for find)
 		file names: ,ff
 		grep in files: ,fg
@@ -140,6 +144,7 @@ return {
 					miniclue.gen_clues.z(),
 
 					{ mode = "n", keys = "<leader>c", desc = "+LSP [C]ode" },
+					{ mode = "n", keys = "<leader>d", desc = "+[D]ebugger" },
 					{ mode = "n", keys = "<leader>w", desc = "+[W]indow" },
 					{ mode = "n", keys = "<leader>t", desc = "+[T]ab" },
 					{ mode = "n", keys = "<leader>f", desc = "+[F]ind" },
