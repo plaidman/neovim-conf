@@ -13,7 +13,7 @@ return {
 			if require("trouble").is_open() then
 				require("trouble")[direction]({ skip_groups = true, jump = true })
 			else
-				require("trouble").open("workspace_diagnostics")
+				require("trouble").open("diagnostics")
 				require("trouble").first({ skip_groups = true, jump = true })
 			end
 		end
@@ -23,7 +23,7 @@ return {
 		end, { desc = "Next [D]iagnostic" })
 
 		vim.keymap.set("n", "[d", function()
-			nav_trouble('previous')
+			nav_trouble('prev')
 		end, { desc = "Prev [D]iagnostic" })
 	end,
 }

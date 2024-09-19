@@ -17,7 +17,7 @@ return {
 		config = function()
 			local servers = {
 				"lua_ls",
-				"tsserver",
+				"ts_ls",
 				"gopls",
 				"eslint",
 				"pyright",
