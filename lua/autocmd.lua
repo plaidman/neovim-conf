@@ -46,3 +46,25 @@ vim.api.nvim_create_user_command("ColorToggle", function(args)
 	vim.cmd.colorscheme(new_color)
 end, { nargs = "?" })
 
+
+vim.api.nvim_create_user_command("Spaces", function(args)
+	if not args.fargs[1] then
+		args.fargs[1] = 4
+	end
+
+	vim.opt.tabstop = tonumber(args.fargs[1]) -- set tabstop width
+	vim.opt.shiftwidth = tonumber(args.fargs[1]) -- auto indent width
+	vim.opt.softtabstop = tonumber(args.fargs[1]) -- number of spaces <tab> key counts as
+	vim.opt.expandtab = true  -- convert <tab> keypresses to spaces
+end, { nargs = "?" })
+
+vim.api.nvim_create_user_command("Tabs", function(args)
+	if not args.fargs[1] then
+		args.fargs[1] = 4
+	end
+
+	vim.opt.tabstop = tonumber(args.fargs[1]) -- set tabstop width
+	vim.opt.shiftwidth = tonumber(args.fargs[1]) -- auto indent width
+	vim.opt.softtabstop = tonumber(args.fargs[1]) -- number of spaces <tab> key counts as
+	vim.opt.expandtab = false  -- convert <tab> keypresses to spaces
+end, { nargs = "?" })
