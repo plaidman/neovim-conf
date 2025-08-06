@@ -18,8 +18,9 @@ autocmd("BufWritePre", {
 	command = [[%s/\s\+$//e]],
 })
 
+-- invoke LSP hover functionality when not moving cursor
 -- autocmd("CursorHold", {
--- 	desc = "hover when stopping moving the cursor",
+-- 	desc = "invoke LSP hover when cursor stops moving",
 -- 	group = augroup,
 -- 	pattern = "*",
 -- 	callback = function()
@@ -45,7 +46,6 @@ vim.api.nvim_create_user_command("ColorToggle", function(args)
 	print(cur_color .. " -> " .. new_color)
 	vim.cmd.colorscheme(new_color)
 end, { nargs = "?" })
-
 
 vim.api.nvim_create_user_command("Spaces", function(args)
 	if not args.fargs[1] then
