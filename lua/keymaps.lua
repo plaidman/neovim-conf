@@ -41,7 +41,7 @@ map({ "x", "i", "n" }, "<s-left>", "<left>", { desc = "prevent jumping around" }
 map({ "x", "i", "n" }, "<s-right>", "<right>", { desc = "prevent jumping around" })
 
 -- copy and paste to system keyboard
--- maybe use osc52 clipboard plugin
+-- TODO maybe use osc52 clipboard plugin
 map("n", "<leader>y", '"+y', { desc = "[Y]ank (motion) to clipboard" })
 map("x", "<leader>y", '"+y', { desc = "[Y]ank (selection) to clipboard" })
 map("n", "<leader>Y", '"+yg_', { desc = "[Y]ank (to eol) to clipboard" })
