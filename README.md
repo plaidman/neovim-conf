@@ -1,20 +1,20 @@
 this config started as a [kickstart](https://github.com/nvim-lua/kickstart.nvim), so following the readme there to start is a good idea
 
 ## TODOs
-[x] colorschemes
-[ ] completion
-[ ] debugger
-[ ] file tree
 [ ] git plugin
-[x] greeter
-[?] harpoon
-[ ] keymap-hints
-[ ] lsp
-[x] lualine
-[x] small configs
 [ ] telescope
 [ ] treesitter
+[ ] lsp
+[ ] completion
 [ ] trouble
+[ ] debugger
+[x] colorschemes
+[x] file tree
+[x] greeter
+[?] harpoon
+[x] keymap-hints
+[x] lualine
+[x] small configs
 
 ## MacOS
 - brew install `go`, `fd`, `ripgrep`
