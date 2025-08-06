@@ -43,7 +43,6 @@ return {
 				file = "",
 			})
 
-            -- TODO check this after insalling telescope
 			vim.keymap.set("n", "<leader>fs", function()
 				vim.cmd("Lazy load telescope.nvim")
 				sessions.select()

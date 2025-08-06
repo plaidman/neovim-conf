@@ -1,14 +1,14 @@
 this config started as a [kickstart](https://github.com/nvim-lua/kickstart.nvim), so following the readme there to start is a good idea
 
 ## TODOs
-[ ] telescope
-[ ] git plugin
 [ ] treesitter
 [ ] lsp
 [ ] completion
 [ ] trouble
 [ ] debugger
 [?] harpoon
+[x] telescope
+[x] git plugin
 [x] colorschemes
 [x] file tree
 [x] greeter
