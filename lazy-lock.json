@@ -14,6 +14,8 @@
   "mini.comment": { "branch": "main", "commit": "871746069a28e35d04a66f88bc0e6831779ccc40" },
   "mini.move": { "branch": "main", "commit": "819e90c3e113a3c826c3003ec07073f1e0677ea0" },
   "mini.notify": { "branch": "main", "commit": "e18f9fc783c7a26fab9c8a094d97dc768e56f558" },
+  "mini.sessions": { "branch": "main", "commit": "8b01c6cd257450b34a07fc0b3f05226020a94c75" },
+  "mini.starter": { "branch": "main", "commit": "aa1f05d40e59ddc652a7333a05e707bd9233b9d0" },
   "nightfox.nvim": { "branch": "main", "commit": "ba47d4b4c5ec308718641ba7402c143836f35aa9" },
   "nvim-surround": { "branch": "main", "commit": "c271c9082886a24866353764cf96c9d957e95b2b" },
   "nvim-web-devicons": { "branch": "master", "commit": "3362099de3368aa620a8105b19ed04c2053e38c0" },

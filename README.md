@@ -6,12 +6,12 @@ this config started as a [kickstart](https://github.com/nvim-lua/kickstart.nvim)
 [ ] debugger
 [ ] file tree
 [ ] git plugin
-[ ] greeter
-[ ] harpoon
+[x] greeter
+[?] harpoon
 [ ] keymap-hints
 [ ] lsp
-[ ] lualine
-[ ] small configs
+[x] lualine
+[x] small configs
 [ ] telescope
 [ ] treesitter
 [ ] trouble
