@@ -16,7 +16,6 @@ return {
 					starter.sections.sessions(6, true),
 					starter.sections.recent_files(6, false),
 					{ name = "New File", action = "enew", section = "Neovim Actions" },
-					{ name = "Oil CWD", action = "Oil", section = "Neovim Actions" },
 					{ name = "CWD Files", action = "Telescope find_files", section = "Neovim Actions" },
 					{
 						name = "Config Files",
@@ -24,7 +23,6 @@ return {
 						section = "Neovim Actions",
 					},
 					{ name = "Plugin Update", action = "Lazy update", section = "Neovim Actions" },
-					{ name = "LSP Update (press U)", action = "Mason", section = "Neovim Actions" },
 					{ name = "Quit", action = "qa", section = "Neovim Actions" },
 				},
 			})
