@@ -2,9 +2,9 @@ this config started as a [kickstart](https://github.com/nvim-lua/kickstart.nvim)
 
 ## TODOs
 [ ] trouble
-    may not be needed anymore
-[ ] debugger
+    can this show errors in all project files?
 [ ] formatter/linter
+[ ] debugger
 [?] harpoon
 [x] completion
 [x] lsp
@@ -19,7 +19,7 @@ this config started as a [kickstart](https://github.com/nvim-lua/kickstart.nvim)
 [x] small configs
 
 ## MacOS
-- brew install `fd`, `ripgrep`
+- brew install `fd`, `ripgrep` for treesitter
 - follow instructions in `/lsp/*.lua` to install language servers
 - install the repo files to `~/.config/nvim/*`.
 - run nvim

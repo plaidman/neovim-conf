@@ -19,7 +19,7 @@ return {
 					{ name = "CWD Files", action = "Telescope find_files", section = "Neovim Actions" },
 					{
 						name = "Config Files",
-						action = 'Telescope find_files cwd="~/.config/nvim"',
+						action = 'Telescope find_files cwd=~/.config/nvim',
 						section = "Neovim Actions",
 					},
 					{ name = "Plugin Update", action = "Lazy update", section = "Neovim Actions" },
