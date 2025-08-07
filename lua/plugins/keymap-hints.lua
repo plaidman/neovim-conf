@@ -144,11 +144,11 @@ return {
 					miniclue.gen_clues.z(),
 
 					{ mode = "n", keys = "<leader>c", desc = "+LSP [C]ode" },
-					-- TODO { mode = "n", keys = "<leader>d", desc = "+[D]ebugger" },
+					-- TODO: { mode = "n", keys = "<leader>d", desc = "+[D]ebugger" },
 					{ mode = "n", keys = "<leader>w", desc = "+[W]indow" },
 					{ mode = "n", keys = "<leader>t", desc = "+[T]ab" },
 					{ mode = "n", keys = "<leader>f", desc = "+[F]ind" },
-					-- TODO { mode = "n", keys = "<leader>h", desc = "+[H]arpoon" },
+					-- TODO: { mode = "n", keys = "<leader>h", desc = "+[H]arpoon" },
 					{ mode = "n", keys = "[", desc = "+Prev Item" },
 					{ mode = "n", keys = "]", desc = "+Next Item" },
 				},

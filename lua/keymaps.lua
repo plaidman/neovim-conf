@@ -18,6 +18,7 @@ map("n", "<leader>wq", "<c-w><c-q>", { desc = "[W]indow Close [Q]uit" })
 map("n", "<leader>wv", "<c-w><c-v>", { desc = "[W]indow [V]ert Split" })
 map("n", "<leader>ws", "<c-w><c-s>", { desc = "[W]indow [S]plit" })
 map("n", "<leader>ww", "<c-w><c-w>", { desc = "Next [W]indow" })
+map("n", "<leader>wr", "<c-w><c-w>", { desc = "[W]indow [R]otate" })
 
 -- tab navigation
 map("n", "<leader>tq", "<cmd>tabclose<cr>", { desc = "[T]ab [Q]uit" })
@@ -41,7 +42,7 @@ map({ "x", "i", "n" }, "<s-left>", "<left>", { desc = "prevent jumping around" }
 map({ "x", "i", "n" }, "<s-right>", "<right>", { desc = "prevent jumping around" })
 
 -- copy and paste to system keyboard
--- TODO maybe use osc52 clipboard plugin
+-- TODO: maybe use osc52 clipboard plugin
 map("n", "<leader>y", '"+y', { desc = "[Y]ank (motion) to clipboard" })
 map("x", "<leader>y", '"+y', { desc = "[Y]ank (selection) to clipboard" })
 map("n", "<leader>Y", '"+yg_', { desc = "[Y]ank (to eol) to clipboard" })

@@ -23,7 +23,7 @@ return {
 
 		dependencies = {
 			"nvim-lua/plenary.nvim",
-			-- TODO "nvim-treesitter/nvim-treesitter",
+			"nvim-treesitter/nvim-treesitter",
 			"nvim-tree/nvim-web-devicons",
 			"nvim-telescope/telescope-fzf-native.nvim",
 			"nvim-telescope/telescope-ui-select.nvim",
