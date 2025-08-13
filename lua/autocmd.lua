@@ -49,7 +49,7 @@ end, { nargs = "?" })
 
 vim.api.nvim_create_user_command("Spaces", function(args)
 	if not args.fargs[1] then
-		args.fargs[1] = 4
+		args.fargs[1] = "4"
 	end
 
 	vim.opt.tabstop = tonumber(args.fargs[1]) -- set tabstop width
@@ -60,11 +60,11 @@ end, { nargs = "?" })
 
 vim.api.nvim_create_user_command("Tabs", function(args)
 	if not args.fargs[1] then
-		args.fargs[1] = 4
+		args.fargs[1] = "4"
 	end
 
 	vim.opt.tabstop = tonumber(args.fargs[1]) -- set tabstop width
 	vim.opt.shiftwidth = tonumber(args.fargs[1]) -- auto indent width
 	vim.opt.softtabstop = tonumber(args.fargs[1]) -- number of spaces <tab> key counts as
-	vim.opt.expandtab = false  -- convert <tab> keypresses to spaces
+	vim.opt.expandtab = false  -- preserve <tab> keypresses as tabs
 end, { nargs = "?" })
