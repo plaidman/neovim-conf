@@ -15,7 +15,7 @@
   "material.nvim": { "branch": "main", "commit": "2929c6fae4886bd7c33371937601409705049a18" },
   "mini.ai": { "branch": "main", "commit": "1cd4f021a05c29acd4ab511c0981da14217daf38" },
   "mini.bufremove": { "branch": "main", "commit": "a1bbb2af40f7773c8cee9e364aac4a724b5c10de" },
-  "mini.clue": { "branch": "main", "commit": "edf3016944b5f2c7932d39af83af7c885ca0f019" },
+  "mini.clue": { "branch": "main", "commit": "0b5e4b138b62ffda7d95904aa2f208d4cfb008c1" },
   "mini.comment": { "branch": "main", "commit": "871746069a28e35d04a66f88bc0e6831779ccc40" },
   "mini.files": { "branch": "main", "commit": "5b9431cf5c69b8e69e5a67d2d12338a3ac2e1541" },
   "mini.move": { "branch": "main", "commit": "819e90c3e113a3c826c3003ec07073f1e0677ea0" },

@@ -1,6 +1,9 @@
 this config started as a [kickstart](https://github.com/nvim-lua/kickstart.nvim), so following the readme there to start is a good idea
 
 ## TODOs
+[ ] nvim-lspconfig
+    make sure we can specify roslyn command afterward
+    add all <leader>cX keybinds to load it
 [ ] trouble
     can this show errors in all project files?
 [ ] formatter/linter

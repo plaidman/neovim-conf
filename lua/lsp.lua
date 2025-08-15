@@ -1,5 +1,6 @@
--- see https://github.com/neovim/nvim-lspconfig for more information about adding new LSPs
 -- see https://gpanders.com/blog/whats-new-in-neovim-0-11/ for a nice overview
+
+-- also see https://github.com/neovim/nvim-lspconfig for more information about adding new LSPs
 -- there should be some instructions in the lsp directory to install each server
 
 -- This actually just enables the lsp servers.

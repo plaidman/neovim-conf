@@ -25,7 +25,7 @@ vim.opt.smartindent = true -- smart indent new lines
 vim.opt.tabstop = 4 -- set tabstop width
 vim.opt.shiftwidth = 4 -- auto indent width
 vim.opt.softtabstop = 4 -- number of spaces <tab> key counts as
--- vim.opt.expandtab = true  -- convert <tab> keypresses to spaces
+vim.opt.expandtab = true  -- convert <tab> keypresses to spaces
 
 -- file processing
 vim.opt.undofile = true -- save undo history between sessions
