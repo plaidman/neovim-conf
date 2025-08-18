@@ -6,7 +6,7 @@ return {
 		-- "ThePrimeagen/harpoon",
 	},
 	config = function()
-        -- TODO unhide this when we do harpoon
+        -- TODO: unhide this when we do harpoon
 		-- local harpoonline = require("harpoonline")
 		-- harpoonline.setup({
 		-- 	on_update = function()
